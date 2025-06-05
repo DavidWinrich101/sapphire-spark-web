@@ -2,13 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { home, washing-machine, laundry } from "lucide-react";
+import { Home, Brush, Package } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       title: "Home & Office Cleaning",
-      icon: home,
+      icon: Home,
       description: "Comprehensive cleaning solutions for residential and commercial spaces",
       features: [
         "Deep cleaning services",
@@ -22,7 +22,7 @@ const Services = () => {
     },
     {
       title: "Bags & Shoes Cleaning",
-      icon: washing-machine,
+      icon: Brush,
       description: "Specialized care for your luxury bags, shoes, and leather goods",
       features: [
         "Leather bag restoration",
@@ -36,7 +36,7 @@ const Services = () => {
     },
     {
       title: "Laundry Services",
-      icon: laundry,
+      icon: Package,
       description: "Premium laundry care for beddings, rugs, and specialty items",
       features: [
         "Bedding cleaning",
