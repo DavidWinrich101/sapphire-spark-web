@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
-        {/* Logo Section with improved spacing */}
+        {/* Logo Section */}
         <div className="mb-12">
           <div className="inline-flex items-center justify-center w-28 h-28 bg-white/40 backdrop-blur-sm rounded-full mb-8 border border-white/50 shadow-lg">
             <div className="text-5xl font-bold text-slate-800 font-playfair">S</div>
@@ -33,7 +33,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-7xl font-bold font-playfair text-slate-800 leading-tight">
               Sapphire Spark
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-pink-600 font-inter">
+            <h2 className="text-2xl md:text-3xl font-semibold text-pink-500 font-inter">
               Cleaning Services
             </h2>
           </div>
@@ -44,7 +44,7 @@ const Hero = () => {
           Flawless Spaces, Sapphire Shine.
         </p>
 
-        {/* Improved Call to Action with better color harmony */}
+        {/* Consistent CTA buttons with better hierarchy */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
           <Button 
             size="lg" 
@@ -55,13 +55,13 @@ const Hero = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-2 border-pink-400 text-pink-600 hover:bg-pink-50 px-10 py-4 text-lg font-semibold transition-all duration-300 hover:border-pink-500"
+            className="border-2 border-slate-600 text-slate-700 hover:bg-slate-50 hover:border-slate-700 px-10 py-4 text-lg font-semibold transition-all duration-300"
           >
             Request a Quote
           </Button>
         </div>
 
-        {/* Improved scroll indicator with better positioning and messaging */}
+        {/* Improved scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-600 z-20">
           <div className="flex flex-col items-center space-y-3">
             <span className="text-sm font-medium">Discover our sparkle below</span>

@@ -55,11 +55,11 @@ const Services = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-slate-800 mb-4">
             Our Services
           </h2>
           <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 max-w-2xl mx-auto">
             From everyday cleaning to specialized care, we offer comprehensive solutions tailored to your needs
           </p>
         </div>
@@ -69,29 +69,29 @@ const Services = () => {
             const IconComponent = service.icon;
             
             return (
-              <Card key={index} className={`relative h-full transition-all duration-300 hover:shadow-xl border-2 ${
-                service.available ? 'border-pink-100 hover:border-pink-300' : 'border-gray-200'
+              <Card key={index} className={`relative h-full transition-all duration-300 hover:shadow-xl bg-white border border-pink-100 hover:border-pink-300 ${
+                service.available ? 'hover:shadow-pink-100/20' : ''
               }`}>
                 {service.comingSoon && (
-                  <Badge className="absolute -top-3 left-4 bg-sparkle-pink text-pink-700 border border-pink-200">
+                  <Badge className="absolute -top-3 left-4 bg-pink-100 text-pink-600 border border-pink-200">
                     Coming Soon
                   </Badge>
                 )}
                 
                 <CardHeader className="text-center pb-4">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mx-auto mb-4 ${
-                    service.available ? 'bg-pink-100' : 'bg-gray-100'
+                    service.available ? 'bg-pink-100' : 'bg-slate-100'
                   }`}>
                     <IconComponent className={`h-8 w-8 ${
-                      service.available ? 'text-pink-500' : 'text-gray-400'
+                      service.available ? 'text-pink-500' : 'text-slate-400'
                     }`} />
                   </div>
                   <CardTitle className={`text-xl font-playfair ${
-                    service.available ? 'text-gray-800' : 'text-gray-500'
+                    service.available ? 'text-slate-800' : 'text-slate-500'
                   }`}>
                     {service.title}
                   </CardTitle>
-                  <CardDescription className="text-gray-600">
+                  <CardDescription className="text-slate-600">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
@@ -101,9 +101,9 @@ const Services = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm">
                         <div className={`w-1.5 h-1.5 rounded-full mr-3 ${
-                          service.available ? 'bg-pink-500' : 'bg-gray-400'
+                          service.available ? 'bg-pink-500' : 'bg-slate-400'
                         }`}></div>
-                        <span className={service.available ? 'text-gray-700' : 'text-gray-500'}>
+                        <span className={service.available ? 'text-slate-700' : 'text-slate-500'}>
                           {feature}
                         </span>
                       </li>
@@ -116,7 +116,7 @@ const Services = () => {
                     className={`w-full ${
                       service.available 
                         ? 'bg-pink-500 hover:bg-pink-600 text-white' 
-                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                        : 'bg-slate-300 text-slate-500 cursor-not-allowed'
                     }`}
                     disabled={!service.available}
                   >

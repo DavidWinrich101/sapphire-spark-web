@@ -1,5 +1,6 @@
 
 import { Sparkles, Phone, Mail, MapPin, Instagram, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
@@ -18,9 +19,9 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-gray-400 mb-4">
-              Where Clean Meets Class
+              Flawless Spaces, Sapphire Shine.
             </p>
-            <div className="flex items-center text-sparkle-pink">
+            <div className="flex items-center text-pink-400">
               <Sparkles className="h-4 w-4 mr-2" />
               <span className="text-sm">Premium Cleaning Excellence</span>
             </div>
@@ -44,19 +45,19 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Contact Us</h4>
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2 text-sparkle-pink" />
+                <Phone className="h-4 w-4 mr-2 text-pink-400" />
                 <span>+1 (555) 123-CLEAN</span>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2 text-sparkle-pink" />
+                <Mail className="h-4 w-4 mr-2 text-pink-400" />
                 <span>hello@sapphirespark.com</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2 text-sparkle-pink" />
+                <MapPin className="h-4 w-4 mr-2 text-pink-400" />
                 <span>Greater Metro Area</span>
               </div>
               <div className="flex items-center">
-                <Instagram className="h-4 w-4 mr-2 text-sparkle-pink" />
+                <Instagram className="h-4 w-4 mr-2 text-pink-400" />
                 <span>@sapphiresparkclean</span>
               </div>
             </div>
@@ -65,7 +66,7 @@ const Footer = () => {
           {/* Working Hours */}
           <div>
             <h4 className="font-bold mb-4 flex items-center">
-              <Clock className="h-4 w-4 mr-2 text-sparkle-pink" />
+              <Clock className="h-4 w-4 mr-2 text-pink-400" />
               Working Hours
             </h4>
             <div className="space-y-2 text-sm text-gray-400">
@@ -83,7 +84,15 @@ const Footer = () => {
               </div>
             </div>
             <div className="mt-4 p-3 bg-pink-900/30 rounded border border-pink-800">
-              <p className="text-xs text-sparkle-pink font-semibold">24/7 Emergency Services Available</p>
+              <p className="text-xs text-pink-400 font-semibold">24/7 Emergency Services Available</p>
+            </div>
+            
+            {/* Fixed Instagram Button */}
+            <div className="mt-4">
+              <Button variant="outline" className="w-full border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-colors">
+                <Instagram className="h-4 w-4 mr-2" />
+                Follow on Instagram
+              </Button>
             </div>
           </div>
         </div>
