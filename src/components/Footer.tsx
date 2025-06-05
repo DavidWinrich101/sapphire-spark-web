@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo & Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-sapphire-600 rounded-full flex items-center justify-center mr-3">
+              <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center mr-3">
                 <span className="text-lg font-bold font-playfair">S</span>
               </div>
               <div>
@@ -82,7 +82,7 @@ const Footer = () => {
                 <span>Emergency</span>
               </div>
             </div>
-            <div className="mt-4 p-3 bg-sapphire-900/30 rounded border border-sapphire-800">
+            <div className="mt-4 p-3 bg-pink-900/30 rounded border border-pink-800">
               <p className="text-xs text-sparkle-pink font-semibold">24/7 Emergency Services Available</p>
             </div>
           </div>

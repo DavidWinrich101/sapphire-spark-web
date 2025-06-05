@@ -14,24 +14,24 @@
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
 
-    --primary: 29 78 216;
+    --primary: 236 72 153;
     --primary-foreground: 248 250 252;
 
-    --secondary: 241 245 249;
+    --secondary: 252 231 243;
     --secondary-foreground: 15 23 42;
 
-    --muted: 241 245 249;
+    --muted: 252 231 243;
     --muted-foreground: 100 116 139;
 
-    --accent: 241 245 249;
+    --accent: 252 231 243;
     --accent-foreground: 15 23 42;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
-    --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 29 78 216;
+    --border: 244 208 225;
+    --input: 244 208 225;
+    --ring: 236 72 153;
 
     --radius: 0.5rem;
 
@@ -39,10 +39,10 @@
     --sidebar-foreground: 71 85 105;
     --sidebar-primary: 15 23 42;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 241 245 249;
+    --sidebar-accent: 252 231 243;
     --sidebar-accent-foreground: 15 23 42;
-    --sidebar-border: 226 232 240;
-    --sidebar-ring: 59 130 246;
+    --sidebar-border: 244 208 225;
+    --sidebar-ring: 236 72 153;
   }
 
   .dark {
@@ -53,7 +53,7 @@
     --card-foreground: 248 250 252;
 
     --popover: 15 23 42;
-    --popover-foreground: 248 250 252;
+    --popover-foreground: 15 23 42;
 
     --primary: 248 250 252;
     --primary-foreground: 15 23 42;
@@ -95,16 +95,16 @@
 }
 
 @layer utilities {
-  .gradient-sapphire {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #93c5fd 100%);
+  .gradient-pink {
+    background: linear-gradient(135deg, #fce7f3 0%, #f9a8d4 50%, #ec4899 100%);
   }
   
   .gradient-sparkle {
-    background: linear-gradient(135deg, #fce7f3 0%, #f8fafc 50%, #dbeafe 100%);
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -23,8 +23,7 @@ const UpcomingServices = () => {
     "Coach Brackets & Accessories Cleaning",
     "Jewelry Cleaning & Polishing", 
     "Curtain & Drape Cleaning",
-    "Leather Furniture Restoration",
-    "Car Interior Detailing"
+    "Leather Furniture Restoration"
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -41,16 +40,16 @@ const UpcomingServices = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-sapphire-50 to-sparkle-pink">
+    <section className="py-20 bg-gradient-to-br from-pink-50 to-sparkle-pink">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge className="bg-sparkle-pink text-sapphire-900 border border-sapphire-200 mb-4">
+          <Badge className="bg-sparkle-pink text-pink-700 border border-pink-200 mb-4">
             Coming Soon
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-sapphire-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-gray-800 mb-4">
             Exciting New Services
           </h2>
-          <div className="w-24 h-1 bg-sapphire-600 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             We're constantly expanding our services to meet your needs. Be the first to know when these premium services launch!
           </p>
@@ -59,10 +58,10 @@ const UpcomingServices = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Upcoming Services List */}
           <div>
-            <Card className="bg-white/70 backdrop-blur-sm border-sapphire-200">
+            <Card className="bg-white/70 backdrop-blur-sm border-pink-200">
               <CardHeader>
-                <CardTitle className="flex items-center text-sapphire-900 font-playfair">
-                  <Sparkles className="h-6 w-6 mr-3 text-sapphire-600" />
+                <CardTitle className="flex items-center text-gray-800 font-playfair">
+                  <Sparkles className="h-6 w-6 mr-3 text-pink-500" />
                   What's Coming Next
                 </CardTitle>
                 <CardDescription>
@@ -72,10 +71,10 @@ const UpcomingServices = () => {
               <CardContent>
                 <ul className="space-y-4">
                   {upcomingServices.map((service, index) => (
-                    <li key={index} className="flex items-center p-3 bg-white/50 rounded-lg border border-sapphire-100">
-                      <div className="w-2 h-2 bg-sapphire-600 rounded-full mr-4"></div>
+                    <li key={index} className="flex items-center p-3 bg-white/50 rounded-lg border border-pink-100">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full mr-4"></div>
                       <span className="text-gray-700 font-medium">{service}</span>
-                      <Badge variant="outline" className="ml-auto text-xs border-sapphire-300 text-sapphire-700">
+                      <Badge variant="outline" className="ml-auto text-xs border-pink-300 text-pink-600">
                         Soon
                       </Badge>
                     </li>
@@ -87,10 +86,10 @@ const UpcomingServices = () => {
 
           {/* Feedback Form */}
           <div>
-            <Card className="bg-white border-sapphire-200">
+            <Card className="bg-white border-pink-200">
               <CardHeader>
-                <CardTitle className="flex items-center text-sapphire-900 font-playfair">
-                  <MessageSquare className="h-6 w-6 mr-3 text-sapphire-600" />
+                <CardTitle className="flex items-center text-gray-800 font-playfair">
+                  <MessageSquare className="h-6 w-6 mr-3 text-pink-500" />
                   Tell Us What You Think
                 </CardTitle>
                 <CardDescription>
@@ -144,7 +143,7 @@ const UpcomingServices = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-sapphire-600 hover:bg-sapphire-700">
+                  <Button type="submit" className="w-full bg-pink-500 hover:bg-pink-600">
                     <Mail className="h-4 w-4 mr-2" />
                     Notify Me When Available
                   </Button>

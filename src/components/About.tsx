@@ -6,10 +6,10 @@ const About = () => {
     <section className="py-20 bg-gradient-sparkle">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-sapphire-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-gray-800 mb-4">
             About Us
           </h2>
-          <div className="w-24 h-1 bg-sapphire-600 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
             At Sapphire Spark Cleaning Services, we believe that cleanliness is not just about removing dirt—it's about creating spaces where life can flourish beautifully.
           </p>
@@ -17,7 +17,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-sapphire-900 font-playfair">
+            <h3 className="text-2xl font-semibold text-gray-800 font-playfair">
               Our Story & Vision
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -29,45 +29,45 @@ const About = () => {
             
             <div className="grid grid-cols-3 gap-4 pt-6">
               <div className="text-center">
-                <Award className="h-8 w-8 text-sapphire-600 mx-auto mb-2" />
-                <p className="text-sm font-semibold text-sapphire-900">Professional</p>
+                <Award className="h-8 w-8 text-pink-500 mx-auto mb-2" />
+                <p className="text-sm font-semibold text-gray-800">Professional</p>
               </div>
               <div className="text-center">
-                <Users className="h-8 w-8 text-sapphire-600 mx-auto mb-2" />
-                <p className="text-sm font-semibold text-sapphire-900">Trusted</p>
+                <Users className="h-8 w-8 text-pink-500 mx-auto mb-2" />
+                <p className="text-sm font-semibold text-gray-800">Trusted</p>
               </div>
               <div className="text-center">
-                <Heart className="h-8 w-8 text-sapphire-600 mx-auto mb-2" />
-                <p className="text-sm font-semibold text-sapphire-900">Caring</p>
+                <Heart className="h-8 w-8 text-pink-500 mx-auto mb-2" />
+                <p className="text-sm font-semibold text-gray-800">Caring</p>
               </div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="bg-white p-8 rounded-lg shadow-lg border border-sapphire-100">
+            <div className="bg-white p-8 rounded-lg shadow-lg border border-pink-100">
               <div className="flex items-center mb-6">
-                <Sparkles className="h-6 w-6 text-sapphire-600 mr-3" />
-                <h4 className="text-xl font-semibold text-sapphire-900">What Sets Us Apart</h4>
+                <Sparkles className="h-6 w-6 text-pink-500 mr-3" />
+                <h4 className="text-xl font-semibold text-gray-800">What Sets Us Apart</h4>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-sapphire-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span className="text-gray-700">Meticulous attention to every detail</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-sapphire-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span className="text-gray-700">Premium, eco-friendly cleaning products</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-sapphire-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span className="text-gray-700">Trained and background-checked staff</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-sapphire-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span className="text-gray-700">100% satisfaction guarantee</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-sapphire-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span className="text-gray-700">Flexible scheduling to fit your lifestyle</span>
                 </li>
               </ul>
