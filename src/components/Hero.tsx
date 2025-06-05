@@ -1,65 +1,74 @@
 
 import { Button } from "@/components/ui/button";
-import { Sparkles, Star } from "lucide-react";
+import { Sparkles, Star, ArrowDown } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-100 via-pink-200 to-pink-300">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-pink-100">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 animate-float">
-          <Sparkles className="h-6 w-6 text-pink-400 animate-sparkle" />
+          <Sparkles className="h-6 w-6 text-pink-300 animate-sparkle" />
         </div>
         <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '1s' }}>
-          <Star className="h-4 w-4 text-slate-700/50 animate-sparkle" />
+          <Star className="h-4 w-4 text-slate-400 animate-sparkle" />
         </div>
         <div className="absolute bottom-32 left-20 animate-float" style={{ animationDelay: '2s' }}>
           <Sparkles className="h-5 w-5 text-slate-600 animate-sparkle" />
         </div>
         <div className="absolute bottom-20 right-10 animate-float" style={{ animationDelay: '0.5s' }}>
-          <Star className="h-6 w-6 text-pink-400 animate-sparkle" />
+          <Star className="h-6 w-6 text-pink-300 animate-sparkle" />
         </div>
       </div>
 
-      <div className="container mx-auto px-4 text-center text-gray-800 relative z-10">
-        {/* Logo Section */}
-        <div className="mb-8">
-          <div className="inline-flex items-center justify-center w-32 h-32 bg-white/20 backdrop-blur-sm rounded-full mb-6 border border-white/30">
-            <div className="text-6xl font-bold text-pink-600 font-playfair">S</div>
+      <div className="container mx-auto px-4 text-center relative z-10">
+        {/* Logo Section with improved spacing */}
+        <div className="mb-12">
+          <div className="inline-flex items-center justify-center w-28 h-28 bg-white/40 backdrop-blur-sm rounded-full mb-8 border border-white/50 shadow-lg">
+            <div className="text-5xl font-bold text-slate-800 font-playfair">S</div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold font-playfair mb-4 text-gray-800">
-            Sapphire Spark
-            <span className="block text-2xl md:text-4xl font-light text-pink-600">Cleaning Services</span>
-          </h1>
+          
+          {/* Improved typography hierarchy */}
+          <div className="space-y-3">
+            <h1 className="text-5xl md:text-7xl font-bold font-playfair text-slate-800 leading-tight">
+              Sapphire Spark
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-semibold text-pink-600 font-inter">
+              Cleaning Services
+            </h2>
+          </div>
         </div>
 
-        {/* Tagline */}
-        <p className="text-xl md:text-2xl font-light mb-8 text-gray-700">
+        {/* Enhanced tagline */}
+        <p className="text-xl md:text-2xl font-medium mb-12 text-slate-700 max-w-2xl mx-auto leading-relaxed">
           Flawless Spaces, Sapphire Shine.
         </p>
 
-        {/* Call to Action */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* Improved Call to Action with better color harmony */}
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
           <Button 
             size="lg" 
-            className="bg-pink-500 text-white hover:bg-pink-600 font-semibold px-8 py-3 text-lg"
+            className="bg-slate-800 text-white hover:bg-slate-700 font-semibold px-10 py-4 text-lg shadow-lg transition-all duration-300 hover:shadow-xl"
           >
             Book a Service
           </Button>
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-pink-300 text-pink-600 hover:bg-pink-50 px-8 py-3 text-lg"
+            className="border-2 border-pink-400 text-pink-600 hover:bg-pink-50 px-10 py-4 text-lg font-semibold transition-all duration-300 hover:border-pink-500"
           >
             Request a Quote
           </Button>
         </div>
 
-        {/* Scroll indicator - moved to prevent overlap */}
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-gray-600 animate-bounce z-20">
-          <div className="flex flex-col items-center">
-            <span className="text-sm mb-2">Scroll to explore</span>
-            <div className="w-1 h-8 bg-pink-300 rounded-full"></div>
+        {/* Improved scroll indicator with better positioning and messaging */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-600 z-20">
+          <div className="flex flex-col items-center space-y-3">
+            <span className="text-sm font-medium">Discover our sparkle below</span>
+            <div className="flex flex-col items-center animate-gentle-bounce">
+              <ArrowDown className="h-5 w-5 text-pink-400" />
+              <div className="w-0.5 h-6 bg-gradient-to-b from-pink-400 to-transparent rounded-full mt-1"></div>
+            </div>
           </div>
         </div>
       </div>

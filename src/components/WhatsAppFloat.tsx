@@ -14,7 +14,7 @@ const WhatsAppFloat = () => {
       tabIndex={0}
       aria-label="Contact us on WhatsApp"
     >
-      <MessageCircle size={24} />
+      <MessageCircle size={20} />
     </div>
   );
 };

@@ -6,80 +6,80 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 15 23 42;
+    --foreground: 30 41 59;
 
     --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card-foreground: 30 41 59;
 
     --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover-foreground: 30 41 59;
 
-    --primary: 236 72 153;
+    --primary: 30 41 59;
     --primary-foreground: 248 250 252;
 
     --secondary: 252 231 243;
-    --secondary-foreground: 15 23 42;
+    --secondary-foreground: 30 41 59;
 
-    --muted: 252 231 243;
+    --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
     --accent: 252 231 243;
-    --accent-foreground: 15 23 42;
+    --accent-foreground: 30 41 59;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
-    --border: 244 208 225;
-    --input: 244 208 225;
-    --ring: 236 72 153;
+    --border: 226 232 240;
+    --input: 248 250 252;
+    --ring: 30 41 59;
 
     --radius: 0.5rem;
 
     --sidebar-background: 248 250 252;
     --sidebar-foreground: 71 85 105;
-    --sidebar-primary: 15 23 42;
+    --sidebar-primary: 30 41 59;
     --sidebar-primary-foreground: 248 250 252;
     --sidebar-accent: 252 231 243;
-    --sidebar-accent-foreground: 15 23 42;
-    --sidebar-border: 244 208 225;
-    --sidebar-ring: 236 72 153;
+    --sidebar-accent-foreground: 30 41 59;
+    --sidebar-border: 226 232 240;
+    --sidebar-ring: 30 41 59;
   }
 
   .dark {
-    --background: 15 23 42;
+    --background: 30 41 59;
     --foreground: 248 250 252;
 
-    --card: 15 23 42;
+    --card: 30 41 59;
     --card-foreground: 248 250 252;
 
-    --popover: 15 23 42;
-    --popover-foreground: 15 23 42;
+    --popover: 30 41 59;
+    --popover-foreground: 30 41 59;
 
     --primary: 248 250 252;
-    --primary-foreground: 15 23 42;
+    --primary-foreground: 30 41 59;
 
-    --secondary: 30 41 59;
+    --secondary: 51 65 85;
     --secondary-foreground: 248 250 252;
 
-    --muted: 30 41 59;
+    --muted: 51 65 85;
     --muted-foreground: 148 163 184;
 
-    --accent: 30 41 59;
+    --accent: 51 65 85;
     --accent-foreground: 248 250 252;
 
     --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
 
-    --border: 30 41 59;
-    --input: 30 41 59;
+    --border: 51 65 85;
+    --input: 51 65 85;
     --ring: 212 212 216;
-    --sidebar-background: 15 23 42;
+    --sidebar-background: 30 41 59;
     --sidebar-foreground: 203 213 225;
     --sidebar-primary: 59 130 246;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 30 41 59;
+    --sidebar-accent: 51 65 85;
     --sidebar-accent-foreground: 203 213 225;
-    --sidebar-border: 30 41 59;
+    --sidebar-border: 51 65 85;
     --sidebar-ring: 59 130 246;
   }
 }
@@ -114,24 +114,26 @@
 /* Floating WhatsApp Button */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 40px;
-  background-color: #25d366;
-  color: #FFF;
+  width: 56px;
+  height: 56px;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #ec4899;
   border-radius: 50px;
   text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
+  font-size: 24px;
+  box-shadow: 0 4px 20px rgba(30, 41, 59, 0.3);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  border: 2px solid #ec4899;
 }
 
 .whatsapp-float:hover {
-  background-color: #20ba5a;
-  transform: scale(1.1);
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(30, 41, 59, 0.4);
 }
