@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-sapphire-900 text-white">
+    <section className="py-20 bg-slate-900 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-4">
@@ -56,35 +56,35 @@ const Contact = () => {
               <h3 className="text-2xl font-bold font-playfair mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Phone className="h-5 w-5 mr-4 text-sparkle-pink" />
+                  <Phone className="h-5 w-5 mr-4 text-pink-400" />
                   <div>
                     <p className="font-semibold">Phone</p>
                     <p className="text-white/80">+1 (555) 123-CLEAN</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <MessageCircle className="h-5 w-5 mr-4 text-sparkle-pink" />
+                  <MessageCircle className="h-5 w-5 mr-4 text-pink-400" />
                   <div>
                     <p className="font-semibold">WhatsApp</p>
                     <p className="text-white/80">+1 (555) 123-CLEAN</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Mail className="h-5 w-5 mr-4 text-sparkle-pink" />
+                  <Mail className="h-5 w-5 mr-4 text-pink-400" />
                   <div>
                     <p className="font-semibold">Email</p>
                     <p className="text-white/80">hello@sapphirespark.com</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="h-5 w-5 mr-4 text-sparkle-pink" />
+                  <MapPin className="h-5 w-5 mr-4 text-pink-400" />
                   <div>
                     <p className="font-semibold">Service Area</p>
                     <p className="text-white/80">Greater Metropolitan Area</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Instagram className="h-5 w-5 mr-4 text-sparkle-pink" />
+                  <Instagram className="h-5 w-5 mr-4 text-pink-400" />
                   <div>
                     <p className="font-semibold">Instagram</p>
                     <p className="text-white/80">@sapphiresparkclean</p>
@@ -96,7 +96,7 @@ const Contact = () => {
             {/* Working Hours */}
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <h4 className="font-bold mb-4 flex items-center">
-                <Clock className="h-5 w-5 mr-2 text-sparkle-pink" />
+                <Clock className="h-5 w-5 mr-2 text-pink-400" />
                 Working Hours
               </h4>
               <div className="space-y-2 text-sm">
@@ -117,10 +117,6 @@ const Contact = () => {
 
             {/* Quick Actions */}
             <div className="space-y-3">
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
-                <MessageCircle className="h-4 w-4 mr-2" />
-                WhatsApp Us Now
-              </Button>
               <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10">
                 <Instagram className="h-4 w-4 mr-2" />
                 Follow on Instagram
@@ -131,7 +127,7 @@ const Contact = () => {
           {/* Booking Form */}
           <Card className="bg-white text-gray-900">
             <CardHeader>
-              <CardTitle className="text-sapphire-900 font-playfair flex items-center">
+              <CardTitle className="text-slate-900 font-playfair flex items-center">
                 <Calendar className="h-6 w-6 mr-3" />
                 Book Your Service
               </CardTitle>
@@ -217,7 +213,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-sapphire-600 hover:bg-sapphire-700">
+                <Button type="submit" className="w-full bg-pink-500 hover:bg-pink-600">
                   Send Booking Request
                 </Button>
               </form>

@@ -48,7 +48,7 @@ const Testimonials = () => {
                   <Quote className="h-8 w-8 text-pink-300 mr-3" />
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      <Star key={i} className="h-4 w-4 fill-slate-700 text-slate-700" />
                     ))}
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const Testimonials = () => {
                 <div className="bg-gradient-to-br from-pink-100 to-pink-200 h-48 rounded-lg flex items-center justify-center">
                   <span className="text-pink-600 font-semibold">Gallery Image {item}</span>
                 </div>
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
+                <div className="absolute inset-0 bg-slate-800 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
                   <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">
                     View Details
                   </span>

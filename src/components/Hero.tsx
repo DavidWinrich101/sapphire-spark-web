@@ -11,10 +11,10 @@ const Hero = () => {
           <Sparkles className="h-6 w-6 text-pink-400 animate-sparkle" />
         </div>
         <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '1s' }}>
-          <Star className="h-4 w-4 text-white/50 animate-sparkle" />
+          <Star className="h-4 w-4 text-slate-700/50 animate-sparkle" />
         </div>
         <div className="absolute bottom-32 left-20 animate-float" style={{ animationDelay: '2s' }}>
-          <Sparkles className="h-5 w-5 text-sparkle-silver animate-sparkle" />
+          <Sparkles className="h-5 w-5 text-slate-600 animate-sparkle" />
         </div>
         <div className="absolute bottom-20 right-10 animate-float" style={{ animationDelay: '0.5s' }}>
           <Star className="h-6 w-6 text-pink-400 animate-sparkle" />
@@ -35,7 +35,7 @@ const Hero = () => {
 
         {/* Tagline */}
         <p className="text-xl md:text-2xl font-light mb-8 text-gray-700">
-          Where Clean Meets Class
+          Flawless Spaces, Sapphire Shine.
         </p>
 
         {/* Call to Action */}
@@ -55,8 +55,8 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-600 animate-bounce">
+        {/* Scroll indicator - moved to prevent overlap */}
+        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-gray-600 animate-bounce z-20">
           <div className="flex flex-col items-center">
             <span className="text-sm mb-2">Scroll to explore</span>
             <div className="w-1 h-8 bg-pink-300 rounded-full"></div>
