@@ -45,7 +45,7 @@ const Hero = () => {
         </p>
 
         {/* Consistent CTA buttons with better hierarchy */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
           <Button 
             size="lg" 
             className="bg-slate-800 text-white hover:bg-slate-700 font-semibold px-10 py-4 text-lg shadow-lg transition-all duration-300 hover:shadow-xl"
@@ -60,15 +60,15 @@ const Hero = () => {
             Request a Quote
           </Button>
         </div>
+      </div>
 
-        {/* Improved scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-600 z-20">
-          <div className="flex flex-col items-center space-y-3">
-            <span className="text-sm font-medium">Discover our sparkle below</span>
-            <div className="flex flex-col items-center animate-gentle-bounce">
-              <ArrowDown className="h-5 w-5 text-pink-400" />
-              <div className="w-0.5 h-6 bg-gradient-to-b from-pink-400 to-transparent rounded-full mt-1"></div>
-            </div>
+      {/* Fixed scroll indicator positioning */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-600 z-20">
+        <div className="flex flex-col items-center space-y-2">
+          <span className="text-sm font-medium">Scroll to explore our services</span>
+          <div className="flex flex-col items-center animate-gentle-bounce">
+            <ArrowDown className="h-5 w-5 text-pink-400" />
+            <div className="w-0.5 h-6 bg-gradient-to-b from-pink-400 to-transparent rounded-full mt-1"></div>
           </div>
         </div>
       </div>
