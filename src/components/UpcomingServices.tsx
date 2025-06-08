@@ -43,13 +43,13 @@ const UpcomingServices = () => {
     <section className="py-20 bg-slate-800 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge className="bg-pink-500 text-white border-pink-400 mb-4">
+          <Badge className="bg-slate-600 text-white border-slate-500 mb-4">
             Coming Soon
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold font-playfair text-white mb-4">
             Exciting New Services
           </h2>
-          <div className="w-24 h-1 bg-pink-400 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-slate-500 mx-auto mb-8"></div>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             We're constantly expanding our services to meet your needs. Be the first to know when these premium services launch!
           </p>
@@ -61,7 +61,7 @@ const UpcomingServices = () => {
             <Card className="bg-white border-slate-600">
               <CardHeader>
                 <CardTitle className="flex items-center text-slate-800 font-playfair">
-                  <Sparkles className="h-6 w-6 mr-3 text-pink-500" />
+                  <Sparkles className="h-6 w-6 mr-3 text-slate-600" />
                   What's Coming Next
                 </CardTitle>
                 <CardDescription className="text-slate-600">
@@ -71,10 +71,10 @@ const UpcomingServices = () => {
               <CardContent>
                 <ul className="space-y-4">
                   {upcomingServices.map((service, index) => (
-                    <li key={index} className="flex items-center p-3 bg-slate-50 rounded-lg border border-pink-100">
-                      <div className="w-2 h-2 bg-pink-500 rounded-full mr-4"></div>
+                    <li key={index} className="flex items-center p-3 bg-slate-50 rounded-lg border border-slate-200">
+                      <div className="w-2 h-2 bg-slate-600 rounded-full mr-4"></div>
                       <span className="text-slate-700 font-medium">{service}</span>
-                      <Badge variant="outline" className="ml-auto text-xs border-pink-300 text-pink-600">
+                      <Badge variant="outline" className="ml-auto text-xs border-slate-400 text-slate-600">
                         Soon
                       </Badge>
                     </li>
@@ -89,7 +89,7 @@ const UpcomingServices = () => {
             <Card className="bg-white border-slate-600">
               <CardHeader>
                 <CardTitle className="flex items-center text-slate-800 font-playfair">
-                  <MessageSquare className="h-6 w-6 mr-3 text-pink-500" />
+                  <MessageSquare className="h-6 w-6 mr-3 text-slate-600" />
                   Tell Us What You Think
                 </CardTitle>
                 <CardDescription className="text-slate-600">
@@ -143,7 +143,7 @@ const UpcomingServices = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-pink-500 hover:bg-pink-600 text-white">
+                  <Button type="submit" className="w-full bg-slate-600 hover:bg-slate-700 text-white">
                     <Mail className="h-4 w-4 mr-2" />
                     Notify Me When Available
                   </Button>

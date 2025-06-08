@@ -58,7 +58,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold font-playfair text-slate-800 mb-4">
             Our Services
           </h2>
-          <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-slate-600 mx-auto mb-8"></div>
           <p className="text-lg text-slate-700 max-w-2xl mx-auto">
             From everyday cleaning to specialized care, we offer comprehensive solutions tailored to your needs
           </p>
@@ -69,21 +69,21 @@ const Services = () => {
             const IconComponent = service.icon;
             
             return (
-              <Card key={index} className={`relative h-full transition-all duration-300 hover:shadow-xl bg-white border border-pink-100 hover:border-pink-300 ${
-                service.available ? 'hover:shadow-pink-100/20' : ''
+              <Card key={index} className={`relative h-full transition-all duration-300 hover:shadow-xl bg-white border border-slate-200 hover:border-slate-400 ${
+                service.available ? 'hover:shadow-slate-100/20' : ''
               }`}>
                 {service.comingSoon && (
-                  <Badge className="absolute -top-3 left-4 bg-pink-100 text-pink-600 border border-pink-200">
+                  <Badge className="absolute -top-3 left-4 bg-slate-100 text-slate-600 border border-slate-300">
                     Coming Soon
                   </Badge>
                 )}
                 
                 <CardHeader className="text-center pb-4">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mx-auto mb-4 ${
-                    service.available ? 'bg-pink-100' : 'bg-slate-100'
+                    service.available ? 'bg-slate-100' : 'bg-slate-100'
                   }`}>
                     <IconComponent className={`h-8 w-8 ${
-                      service.available ? 'text-pink-500' : 'text-slate-400'
+                      service.available ? 'text-slate-600' : 'text-slate-400'
                     }`} />
                   </div>
                   <CardTitle className={`text-xl font-playfair ${
@@ -101,7 +101,7 @@ const Services = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm">
                         <div className={`w-1.5 h-1.5 rounded-full mr-3 ${
-                          service.available ? 'bg-pink-500' : 'bg-slate-400'
+                          service.available ? 'bg-slate-600' : 'bg-slate-400'
                         }`}></div>
                         <span className={service.available ? 'text-slate-700' : 'text-slate-500'}>
                           {feature}
@@ -115,7 +115,7 @@ const Services = () => {
                   <Button 
                     className={`w-full ${
                       service.available 
-                        ? 'bg-pink-500 hover:bg-pink-600 text-white' 
+                        ? 'bg-slate-600 hover:bg-slate-700 text-white' 
                         : 'bg-slate-300 text-slate-500 cursor-not-allowed'
                     }`}
                     disabled={!service.available}

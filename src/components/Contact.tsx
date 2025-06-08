@@ -43,7 +43,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-6">
             Get in Touch
           </h2>
-          <div className="w-24 h-1 bg-pink-400 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-slate-500 mx-auto mb-8"></div>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Ready to experience the Sapphire Spark difference? Contact us today to schedule your service or ask any questions.
           </p>
@@ -56,35 +56,35 @@ const Contact = () => {
               <h3 className="text-2xl font-bold font-playfair mb-8 text-white">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-center">
-                  <Phone className="h-5 w-5 mr-4 text-pink-400" />
+                  <Phone className="h-5 w-5 mr-4 text-slate-500" />
                   <div>
                     <p className="font-semibold text-white">Phone</p>
                     <p className="text-slate-300">+1 (555) 123-CLEAN</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <MessageCircle className="h-5 w-5 mr-4 text-pink-400" />
+                  <MessageCircle className="h-5 w-5 mr-4 text-slate-500" />
                   <div>
                     <p className="font-semibold text-white">WhatsApp</p>
                     <p className="text-slate-300">+1 (555) 123-CLEAN</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Mail className="h-5 w-5 mr-4 text-pink-400" />
+                  <Mail className="h-5 w-5 mr-4 text-slate-500" />
                   <div>
                     <p className="font-semibold text-white">Email</p>
                     <p className="text-slate-300">hello@sapphirespark.com</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="h-5 w-5 mr-4 text-pink-400" />
+                  <MapPin className="h-5 w-5 mr-4 text-slate-500" />
                   <div>
                     <p className="font-semibold text-white">Service Area</p>
                     <p className="text-slate-300">Greater Metropolitan Area</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Instagram className="h-5 w-5 mr-4 text-pink-400" />
+                  <Instagram className="h-5 w-5 mr-4 text-slate-500" />
                   <div>
                     <p className="font-semibold text-white">Instagram</p>
                     <p className="text-slate-300">@sapphiresparkclean</p>
@@ -96,7 +96,7 @@ const Contact = () => {
             {/* Working Hours */}
             <div className="bg-slate-700/50 backdrop-blur-sm rounded-lg p-6 border border-slate-600">
               <h4 className="font-bold mb-4 flex items-center text-white">
-                <Clock className="h-5 w-5 mr-2 text-pink-400" />
+                <Clock className="h-5 w-5 mr-2 text-slate-500" />
                 Working Hours
               </h4>
               <div className="space-y-3 text-sm">
@@ -128,7 +128,7 @@ const Contact = () => {
           <Card className="bg-white text-slate-800 border-slate-200">
             <CardHeader>
               <CardTitle className="text-slate-800 font-playfair flex items-center text-xl">
-                <Calendar className="h-6 w-6 mr-3 text-pink-500" />
+                <Calendar className="h-6 w-6 mr-3 text-slate-600" />
                 Book Your Service
               </CardTitle>
               <CardDescription className="text-slate-600">
