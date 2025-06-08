@@ -71,53 +71,69 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-white to-pink-100">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-slate-100">
       <div className="w-full max-w-md p-6">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white/40 backdrop-blur-sm rounded-full mb-4 border border-white/50 shadow-lg">
-            <Sparkles className="h-8 w-8 text-pink-500" />
+            <Sparkles className="h-8 w-8 text-slate-600" />
           </div>
           <h1 className="text-3xl font-bold font-playfair text-slate-800">Sapphire Spark</h1>
           <p className="text-slate-600 mt-2">Welcome to our cleaning services</p>
         </div>
 
         <Tabs defaultValue="signin" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="signin">Sign In</TabsTrigger>
-            <TabsTrigger value="signup">Sign Up</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-2 bg-white border border-slate-200">
+            <TabsTrigger 
+              value="signin" 
+              className="text-slate-600 data-[state=active]:bg-slate-800 data-[state=active]:text-white"
+            >
+              Sign In
+            </TabsTrigger>
+            <TabsTrigger 
+              value="signup"
+              className="text-slate-600 data-[state=active]:bg-slate-800 data-[state=active]:text-white"
+            >
+              Sign Up
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="signin">
-            <Card>
+            <Card className="border-slate-200 shadow-lg">
               <CardHeader>
-                <CardTitle>Sign In</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-slate-800">Sign In</CardTitle>
+                <CardDescription className="text-slate-600">
                   Enter your credentials to access your account
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSignIn} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="signin-email">Email</Label>
+                    <Label htmlFor="signin-email" className="text-slate-700">Email</Label>
                     <Input
                       id="signin-email"
                       name="email"
                       type="email"
                       placeholder="your@email.com"
                       required
+                      className="border-slate-300 focus:border-slate-600 focus:ring-slate-600"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signin-password">Password</Label>
+                    <Label htmlFor="signin-password" className="text-slate-700">Password</Label>
                     <Input
                       id="signin-password"
                       name="password"
                       type="password"
                       placeholder="Your password"
                       required
+                      className="border-slate-300 focus:border-slate-600 focus:ring-slate-600"
                     />
                   </div>
-                  <Button type="submit" className="w-full" disabled={isLoading}>
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-slate-800 text-white hover:bg-slate-700 transition-colors" 
+                    disabled={isLoading}
+                  >
                     {isLoading ? 'Signing in...' : 'Sign In'}
                   </Button>
                 </form>
@@ -126,37 +142,39 @@ const Auth = () => {
           </TabsContent>
 
           <TabsContent value="signup">
-            <Card>
+            <Card className="border-slate-200 shadow-lg">
               <CardHeader>
-                <CardTitle>Create Account</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-slate-800">Create Account</CardTitle>
+                <CardDescription className="text-slate-600">
                   Sign up for a new account to get started
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSignUp} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="signup-name">Full Name</Label>
+                    <Label htmlFor="signup-name" className="text-slate-700">Full Name</Label>
                     <Input
                       id="signup-name"
                       name="fullName"
                       type="text"
                       placeholder="Your full name"
                       required
+                      className="border-slate-300 focus:border-slate-600 focus:ring-slate-600"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signup-email">Email</Label>
+                    <Label htmlFor="signup-email" className="text-slate-700">Email</Label>
                     <Input
                       id="signup-email"
                       name="email"
                       type="email"
                       placeholder="your@email.com"
                       required
+                      className="border-slate-300 focus:border-slate-600 focus:ring-slate-600"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signup-password">Password</Label>
+                    <Label htmlFor="signup-password" className="text-slate-700">Password</Label>
                     <Input
                       id="signup-password"
                       name="password"
@@ -164,9 +182,14 @@ const Auth = () => {
                       placeholder="Create a password"
                       required
                       minLength={6}
+                      className="border-slate-300 focus:border-slate-600 focus:ring-slate-600"
                     />
                   </div>
-                  <Button type="submit" className="w-full" disabled={isLoading}>
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-slate-800 text-white hover:bg-slate-700 transition-colors" 
+                    disabled={isLoading}
+                  >
                     {isLoading ? 'Creating account...' : 'Create Account'}
                   </Button>
                 </form>
