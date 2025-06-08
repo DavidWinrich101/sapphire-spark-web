@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Logo & Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center mr-3">
+              <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center mr-3">
                 <span className="text-lg font-bold font-playfair">S</span>
               </div>
               <div>
@@ -21,7 +21,7 @@ const Footer = () => {
             <p className="text-sm text-gray-400 mb-4">
               Flawless Spaces, Sapphire Shine.
             </p>
-            <div className="flex items-center text-slate-500">
+            <div className="flex items-center text-pink-400">
               <Sparkles className="h-4 w-4 mr-2" />
               <span className="text-sm">Premium Cleaning Excellence</span>
             </div>
@@ -45,19 +45,19 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Contact Us</h4>
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2 text-slate-500" />
+                <Phone className="h-4 w-4 mr-2 text-pink-400" />
                 <span>+1 (555) 123-CLEAN</span>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2 text-slate-500" />
+                <Mail className="h-4 w-4 mr-2 text-pink-400" />
                 <span>hello@sapphirespark.com</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2 text-slate-500" />
+                <MapPin className="h-4 w-4 mr-2 text-pink-400" />
                 <span>Greater Metro Area</span>
               </div>
               <div className="flex items-center">
-                <Instagram className="h-4 w-4 mr-2 text-slate-500" />
+                <Instagram className="h-4 w-4 mr-2 text-pink-400" />
                 <span>@sapphiresparkclean</span>
               </div>
             </div>
@@ -66,7 +66,7 @@ const Footer = () => {
           {/* Working Hours */}
           <div>
             <h4 className="font-bold mb-4 flex items-center">
-              <Clock className="h-4 w-4 mr-2 text-slate-500" />
+              <Clock className="h-4 w-4 mr-2 text-pink-400" />
               Working Hours
             </h4>
             <div className="space-y-2 text-sm text-gray-400">
@@ -83,13 +83,13 @@ const Footer = () => {
                 <span>Emergency</span>
               </div>
             </div>
-            <div className="mt-4 p-3 bg-slate-900/30 rounded border border-slate-700">
-              <p className="text-xs text-slate-500 font-semibold">24/7 Emergency Services Available</p>
+            <div className="mt-4 p-3 bg-pink-900/30 rounded border border-pink-800">
+              <p className="text-xs text-pink-400 font-semibold">24/7 Emergency Services Available</p>
             </div>
             
             {/* Fixed Instagram Button */}
             <div className="mt-4">
-              <Button variant="outline" className="w-full border-slate-600 text-slate-500 hover:bg-slate-600 hover:text-white transition-colors">
+              <Button variant="outline" className="w-full border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-colors">
                 <Instagram className="h-4 w-4 mr-2" />
                 Follow on Instagram
               </Button>

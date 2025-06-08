@@ -17,14 +17,14 @@
     --primary: 30 41 59;
     --primary-foreground: 248 250 252;
 
-    --secondary: 51 65 85;
-    --secondary-foreground: 248 250 252;
+    --secondary: 252 231 243;
+    --secondary-foreground: 30 41 59;
 
     --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
-    --accent: 51 65 85;
-    --accent-foreground: 248 250 252;
+    --accent: 252 231 243;
+    --accent-foreground: 30 41 59;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
@@ -39,8 +39,8 @@
     --sidebar-foreground: 71 85 105;
     --sidebar-primary: 30 41 59;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 51 65 85;
-    --sidebar-accent-foreground: 248 250 252;
+    --sidebar-accent: 252 231 243;
+    --sidebar-accent-foreground: 30 41 59;
     --sidebar-border: 226 232 240;
     --sidebar-ring: 30 41 59;
   }
@@ -95,16 +95,16 @@
 }
 
 @layer utilities {
-  .gradient-dark {
-    background: linear-gradient(135deg, #334155 0%, #475569 50%, #64748b 100%);
+  .gradient-pink {
+    background: linear-gradient(135deg, #fce7f3 0%, #f9a8d4 50%, #ec4899 100%);
   }
   
   .gradient-sparkle {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+    background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -119,7 +119,7 @@
   bottom: 24px;
   right: 24px;
   background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  color: #64748b;
+  color: #ec4899;
   border-radius: 50px;
   text-align: center;
   font-size: 24px;
@@ -129,7 +129,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  border: 2px solid #64748b;
+  border: 2px solid #ec4899;
 }
 
 .whatsapp-float:hover {

@@ -4,20 +4,20 @@ import { Sparkles, Star, ArrowDown } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-pink-100">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 animate-float">
-          <Sparkles className="h-6 w-6 text-slate-400 animate-sparkle" />
+          <Sparkles className="h-6 w-6 text-pink-300 animate-sparkle" />
         </div>
         <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '1s' }}>
-          <Star className="h-4 w-4 text-slate-500 animate-sparkle" />
+          <Star className="h-4 w-4 text-slate-400 animate-sparkle" />
         </div>
         <div className="absolute bottom-32 left-20 animate-float" style={{ animationDelay: '2s' }}>
           <Sparkles className="h-5 w-5 text-slate-600 animate-sparkle" />
         </div>
         <div className="absolute bottom-20 right-10 animate-float" style={{ animationDelay: '0.5s' }}>
-          <Star className="h-6 w-6 text-slate-400 animate-sparkle" />
+          <Star className="h-6 w-6 text-pink-300 animate-sparkle" />
         </div>
       </div>
 
@@ -33,7 +33,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-7xl font-bold font-playfair text-slate-800 leading-tight">
               Sapphire Spark
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-slate-600 font-inter">
+            <h2 className="text-2xl md:text-3xl font-semibold text-pink-500 font-inter">
               Cleaning Services
             </h2>
           </div>
@@ -67,8 +67,8 @@ const Hero = () => {
         <div className="flex flex-col items-center space-y-2">
           <span className="text-sm font-medium">Scroll to explore our services</span>
           <div className="flex flex-col items-center animate-gentle-bounce">
-            <ArrowDown className="h-5 w-5 text-slate-500" />
-            <div className="w-0.5 h-6 bg-gradient-to-b from-slate-500 to-transparent rounded-full mt-1"></div>
+            <ArrowDown className="h-5 w-5 text-pink-400" />
+            <div className="w-0.5 h-6 bg-gradient-to-b from-pink-400 to-transparent rounded-full mt-1"></div>
           </div>
         </div>
       </div>

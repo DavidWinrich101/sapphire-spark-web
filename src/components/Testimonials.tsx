@@ -34,7 +34,7 @@ const Testimonials = () => {
           <h2 className="text-4xl md:text-5xl font-bold font-playfair text-slate-800 mb-4">
             What Our Clients Say
           </h2>
-          <div className="w-24 h-1 bg-slate-600 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
           <p className="text-lg text-slate-700 max-w-2xl mx-auto">
             Don't just take our word for it—hear from satisfied clients who trust us with their most precious spaces
           </p>
@@ -42,10 +42,10 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white border-slate-200 hover:shadow-lg transition-shadow duration-300">
+            <Card key={index} className="bg-white border-pink-100 hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Quote className="h-8 w-8 text-slate-400 mr-3" />
+                  <Quote className="h-8 w-8 text-pink-300 mr-3" />
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-slate-700 text-slate-700" />
@@ -58,7 +58,7 @@ const Testimonials = () => {
                 </p>
                 
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-slate-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                  <div className="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                     {testimonial.image}
                   </div>
                   <div>
@@ -79,8 +79,8 @@ const Testimonials = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[1, 2, 3, 4].map((item) => (
               <div key={item} className="relative group cursor-pointer">
-                <div className="bg-gradient-to-br from-slate-50 to-slate-100 h-48 rounded-lg flex items-center justify-center border border-slate-300">
-                  <span className="text-slate-600 font-semibold">Gallery Image {item}</span>
+                <div className="bg-gradient-to-br from-pink-50 to-pink-100 h-48 rounded-lg flex items-center justify-center border border-pink-200">
+                  <span className="text-pink-600 font-semibold">Gallery Image {item}</span>
                 </div>
                 <div className="absolute inset-0 bg-slate-800 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
                   <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">
