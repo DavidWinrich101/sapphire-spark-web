@@ -1,22 +1,25 @@
-
 import { Button } from "@/components/ui/button";
 import { Sparkles, Star, ArrowDown } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-pink-100">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-pink-100">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 animate-float">
           <Sparkles className="h-6 w-6 text-pink-300 animate-sparkle" />
         </div>
-        <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '1s' }}>
+        <div className="absolute top-40 right-20 animate-float" style={{
+        animationDelay: '1s'
+      }}>
           <Star className="h-4 w-4 text-slate-400 animate-sparkle" />
         </div>
-        <div className="absolute bottom-32 left-20 animate-float" style={{ animationDelay: '2s' }}>
+        <div className="absolute bottom-32 left-20 animate-float" style={{
+        animationDelay: '2s'
+      }}>
           <Sparkles className="h-5 w-5 text-slate-600 animate-sparkle" />
         </div>
-        <div className="absolute bottom-20 right-10 animate-float" style={{ animationDelay: '0.5s' }}>
+        <div className="absolute bottom-20 right-10 animate-float" style={{
+        animationDelay: '0.5s'
+      }}>
           <Star className="h-6 w-6 text-pink-300 animate-sparkle" />
         </div>
       </div>
@@ -46,17 +49,10 @@ const Hero = () => {
 
         {/* Consistent CTA buttons with better hierarchy */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-          <Button 
-            size="lg" 
-            className="bg-slate-800 text-white hover:bg-slate-700 font-semibold px-10 py-4 text-lg shadow-lg transition-all duration-300 hover:shadow-xl"
-          >
+          <Button size="lg" className="bg-slate-800 text-white hover:bg-slate-700 font-semibold px-10 py-4 text-lg shadow-lg transition-all duration-300 hover:shadow-xl">
             Book a Service
           </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="border-2 border-slate-600 text-slate-700 hover:bg-slate-50 hover:border-slate-700 px-10 py-4 text-lg font-semibold transition-all duration-300"
-          >
+          <Button variant="outline" size="lg" className="border-2 border-slate-600 text-slate-700 hover:bg-slate-50 hover:border-slate-700 px-10 py-4 text-lg font-semibold transition-all duration-300">
             Request a Quote
           </Button>
         </div>
@@ -64,7 +60,7 @@ const Hero = () => {
 
       {/* Fixed scroll indicator positioning */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-600 z-20">
-        <div className="flex flex-col items-center space-y-2">
+        <div className="flex flex-col items-center space-y-2 my-[64px] mx-0">
           <span className="text-sm font-medium">Scroll to explore our services</span>
           <div className="flex flex-col items-center animate-gentle-bounce">
             <ArrowDown className="h-5 w-5 text-pink-400" />
@@ -72,8 +68,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

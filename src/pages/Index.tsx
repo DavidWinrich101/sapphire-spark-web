@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
@@ -11,22 +10,20 @@ import UpcomingServices from "@/components/UpcomingServices";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-
 const Index = () => {
-  const { user } = useAuth();
+  const {
+    user
+  } = useAuth();
   const navigate = useNavigate();
-
   useEffect(() => {
     // If user comes to auth page while already logged in, redirect to home
     if (user && window.location.pathname === '/auth') {
       navigate('/');
     }
   }, [user, navigate]);
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
-      <div className="pt-20"> {/* Add padding to account for fixed navigation */}
+      <div className="pt-20 bg-[#fbfbfb]"> {/* Add padding to account for fixed navigation */}
         <Hero />
         <About />
         <Services />
@@ -36,8 +33,6 @@ const Index = () => {
         <Footer />
         <WhatsAppFloat />
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
