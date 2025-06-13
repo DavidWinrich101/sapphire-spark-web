@@ -86,7 +86,7 @@ const Footer = () => {
             
             {/* Fixed Instagram Button */}
             <div className="mt-4">
-              <Button variant="outline" className="w-full border-pink-500 hover:bg-pink-500 transition-colors text-slate-50">
+              <Button variant="outline" className="w-full border-pink-500 hover:bg-pink-500 transition-colors text-slate-950">
                 <Instagram className="h-4 w-4 mr-2" />
                 Follow on Instagram
               </Button>
