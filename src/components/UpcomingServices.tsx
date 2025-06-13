@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { Sparkles, Mail, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
 const UpcomingServices = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,31 +14,30 @@ const UpcomingServices = () => {
     interest: '',
     feedback: ''
   });
-  
-  const { toast } = useToast();
-
-  const upcomingServices = [
-    "Coach Brackets & Accessories Cleaning",
-    "Jewelry Cleaning & Polishing", 
-    "Curtain & Drape Cleaning",
-    "Leather Furniture Restoration"
-  ];
-
+  const {
+    toast
+  } = useToast();
+  const upcomingServices = ["Coach Brackets & Accessories Cleaning", "Jewelry Cleaning & Polishing", "Curtain & Drape Cleaning", "Leather Furniture Restoration"];
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Thank you for your interest!",
-      description: "We'll notify you when these services become available.",
+      description: "We'll notify you when these services become available."
     });
-    setFormData({ name: '', email: '', interest: '', feedback: '' });
+    setFormData({
+      name: '',
+      email: '',
+      interest: '',
+      feedback: ''
+    });
   };
-
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
-
-  return (
-    <section className="py-20 bg-slate-800 text-white">
+  return <section className="py-20 bg-slate-800 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="bg-pink-500 text-white border-pink-400 mb-4">
@@ -70,15 +67,13 @@ const UpcomingServices = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
-                  {upcomingServices.map((service, index) => (
-                    <li key={index} className="flex items-center p-3 bg-slate-50 rounded-lg border border-pink-100">
+                  {upcomingServices.map((service, index) => <li key={index} className="flex items-center p-3 bg-slate-50 rounded-lg border border-pink-100">
                       <div className="w-2 h-2 bg-pink-500 rounded-full mr-4"></div>
                       <span className="text-slate-700 font-medium">{service}</span>
                       <Badge variant="outline" className="ml-auto text-xs border-pink-300 text-pink-600">
                         Soon
                       </Badge>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </CardContent>
             </Card>
@@ -99,48 +94,24 @@ const UpcomingServices = () => {
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
-                    <div>
+                    <div className="">
                       <Label htmlFor="name" className="text-slate-700">Name</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => handleInputChange('name', e.target.value)}
-                        placeholder="Your name"
-                        required
-                      />
+                      <Input id="name" value={formData.name} onChange={e => handleInputChange('name', e.target.value)} placeholder="Your name" required className="bg-pink-300" />
                     </div>
                     <div>
                       <Label htmlFor="email" className="text-slate-700">Email</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => handleInputChange('email', e.target.value)}
-                        placeholder="your.email@example.com"
-                        required
-                      />
+                      <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} placeholder="your.email@example.com" required className="bg-pink-300" />
                     </div>
                   </div>
 
                   <div>
                     <Label htmlFor="interest" className="text-slate-700">Which service interests you most?</Label>
-                    <Input
-                      id="interest"
-                      value={formData.interest}
-                      onChange={(e) => handleInputChange('interest', e.target.value)}
-                      placeholder="e.g., Coach Brackets Cleaning"
-                    />
+                    <Input id="interest" value={formData.interest} onChange={e => handleInputChange('interest', e.target.value)} placeholder="e.g., Coach Brackets Cleaning" className="bg-pink-300" />
                   </div>
 
                   <div>
                     <Label htmlFor="feedback" className="text-slate-700">Additional feedback or suggestions</Label>
-                    <Textarea
-                      id="feedback"
-                      value={formData.feedback}
-                      onChange={(e) => handleInputChange('feedback', e.target.value)}
-                      placeholder="Tell us about any other cleaning services you'd love to see..."
-                      rows={4}
-                    />
+                    <Textarea id="feedback" value={formData.feedback} onChange={e => handleInputChange('feedback', e.target.value)} placeholder="Tell us about any other cleaning services you'd love to see..." rows={4} />
                   </div>
 
                   <Button type="submit" className="w-full bg-pink-500 hover:bg-pink-600 text-white">
@@ -153,8 +124,6 @@ const UpcomingServices = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default UpcomingServices;

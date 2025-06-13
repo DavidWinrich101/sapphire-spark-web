@@ -1,10 +1,7 @@
-
 import { Sparkles, Phone, Mail, MapPin, Instagram, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Footer = () => {
-  return (
-    <footer className="bg-black text-white">
+  return <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & Brand */}
@@ -89,7 +86,7 @@ const Footer = () => {
             
             {/* Fixed Instagram Button */}
             <div className="mt-4">
-              <Button variant="outline" className="w-full border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-colors">
+              <Button variant="outline" className="w-full border-pink-500 hover:bg-pink-500 transition-colors text-slate-50">
                 <Instagram className="h-4 w-4 mr-2" />
                 Follow on Instagram
               </Button>
@@ -114,8 +111,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,7 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Calendar } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
 const Contact = () => {
   const [bookingForm, setBookingForm] = useState({
     name: '',
@@ -18,26 +16,31 @@ const Contact = () => {
     message: '',
     preferredDate: ''
   });
-
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Booking Request Received!",
-      description: "We'll contact you within 24 hours to confirm your appointment.",
+      description: "We'll contact you within 24 hours to confirm your appointment."
     });
     setBookingForm({
-      name: '', email: '', phone: '', service: '', message: '', preferredDate: ''
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: '',
+      preferredDate: ''
     });
   };
-
   const handleInputChange = (field: string, value: string) => {
-    setBookingForm(prev => ({ ...prev, [field]: value }));
+    setBookingForm(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
-
-  return (
-    <section className="py-20 bg-slate-800 text-white">
+  return <section className="py-20 bg-slate-800 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-6">
@@ -117,7 +120,7 @@ const Contact = () => {
 
             {/* Quick Actions */}
             <div className="space-y-3">
-              <Button variant="outline" className="w-full border-slate-500 text-slate-300 hover:bg-slate-700 hover:text-white transition-colors">
+              <Button variant="outline" className="w-full border-slate-500 transition-colors bg-pink-500 hover:bg-pink-400 text-slate-900">
                 <Instagram className="h-4 w-4 mr-2" />
                 Follow on Instagram
               </Button>
@@ -140,46 +143,23 @@ const Contact = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name" className="text-slate-700 font-medium">Full Name *</Label>
-                    <Input
-                      id="name"
-                      value={bookingForm.name}
-                      onChange={(e) => handleInputChange('name', e.target.value)}
-                      placeholder="Your full name"
-                      required
-                      className="mt-1"
-                    />
+                    <Input id="name" value={bookingForm.name} onChange={e => handleInputChange('name', e.target.value)} placeholder="Your full name" required className="mt-1 bg-slate-800" />
                   </div>
                   <div>
                     <Label htmlFor="phone" className="text-slate-700 font-medium">Phone Number *</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      value={bookingForm.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
-                      placeholder="(555) 123-4567"
-                      required
-                      className="mt-1"
-                    />
+                    <Input id="phone" type="tel" value={bookingForm.phone} onChange={e => handleInputChange('phone', e.target.value)} placeholder="(555) 123-4567" required className="mt-1 bg-slate-800" />
                   </div>
                 </div>
 
                 <div>
                   <Label htmlFor="email" className="text-slate-700 font-medium">Email Address *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={bookingForm.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
-                    placeholder="your.email@example.com"
-                    required
-                    className="mt-1"
-                  />
+                  <Input id="email" type="email" value={bookingForm.email} onChange={e => handleInputChange('email', e.target.value)} placeholder="your.email@example.com" required className="mt-1 bg-slate-800" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="service" className="text-slate-700 font-medium">Service Type *</Label>
-                    <Select value={bookingForm.service} onValueChange={(value) => handleInputChange('service', value)}>
+                    <Select value={bookingForm.service} onValueChange={value => handleInputChange('service', value)}>
                       <SelectTrigger className="mt-1 border-2 border-slate-200 bg-white">
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
@@ -196,26 +176,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <Label htmlFor="date" className="text-slate-700 font-medium">Preferred Date</Label>
-                    <Input
-                      id="date"
-                      type="date"
-                      value={bookingForm.preferredDate}
-                      onChange={(e) => handleInputChange('preferredDate', e.target.value)}
-                      className="mt-1"
-                    />
+                    <Input id="date" type="date" value={bookingForm.preferredDate} onChange={e => handleInputChange('preferredDate', e.target.value)} className="bg-slate-50" />
                   </div>
                 </div>
 
                 <div>
                   <Label htmlFor="message" className="text-slate-700 font-medium">Additional Details</Label>
-                  <Textarea
-                    id="message"
-                    value={bookingForm.message}
-                    onChange={(e) => handleInputChange('message', e.target.value)}
-                    placeholder="Tell us about your space, special requirements, or any questions..."
-                    rows={4}
-                    className="mt-1"
-                  />
+                  <Textarea id="message" value={bookingForm.message} onChange={e => handleInputChange('message', e.target.value)} placeholder="Tell us about your space, special requirements, or any questions..." rows={4} className="mt-1" />
                 </div>
 
                 <Button type="submit" className="w-full bg-slate-800 hover:bg-slate-700 text-white py-3 font-semibold transition-colors">
@@ -226,8 +193,6 @@ const Contact = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;

@@ -60,7 +60,7 @@ const Hero = () => {
 
       {/* Fixed scroll indicator positioning */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-600 z-20">
-        <div className="flex flex-col items-center space-y-2 my-[64px] mx-0">
+        <div className="flex flex-col items-center space-y-2 mx-0 my-0">
           <span className="text-sm font-medium">Scroll to explore our services</span>
           <div className="flex flex-col items-center animate-gentle-bounce">
             <ArrowDown className="h-5 w-5 text-pink-400" />
