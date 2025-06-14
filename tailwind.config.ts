@@ -63,6 +63,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				pink: {
+					50: '#fdf2f8',
+					100: '#fce7f3',
+					200: '#fbcfe8',
+					300: '#f9a8d4',
+					400: '#f472b6',
+					500: '#ec4899',
+					600: '#db2777',
+					700: '#be185d',
+					800: '#9d174d',
+					900: '#831843',
+					950: '#500724'
+				},
 				slate: {
 					50: '#f8fafc',
 					100: '#f1f5f9',
@@ -75,6 +88,18 @@ export default {
 					800: '#1e293b',
 					900: '#0f172a',
 					950: '#020617'
+				},
+				navy: {
+					50: '#f8fafc',
+					100: '#f1f5f9',
+					200: '#e2e8f0',
+					300: '#cbd5e1',
+					400: '#94a3b8',
+					500: '#64748b',
+					600: '#475569',
+					700: '#334155',
+					800: '#1e293b',
+					900: '#0f172a'
 				}
 			},
 			fontFamily: {
@@ -110,7 +135,7 @@ export default {
 					},
 					'50%': {
 						opacity: '0.5',
-						transform: 'scale(1.2) rotate(180deg)'
+						transform: 'scale(1.1) rotate(180deg)'
 					}
 				},
 				'float': {
@@ -118,7 +143,7 @@ export default {
 						transform: 'translateY(0px)'
 					},
 					'50%': {
-						transform: 'translateY(-12px)'
+						transform: 'translateY(-10px)'
 					}
 				},
 				'gentle-bounce': {
@@ -126,41 +151,16 @@ export default {
 						transform: 'translateY(0px)'
 					},
 					'50%': {
-						transform: 'translateY(-8px)'
-					}
-				},
-				'fade-in': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateY(20px)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateY(0)'
-					}
-				},
-				'scale-in': {
-					'0%': {
-						opacity: '0',
-						transform: 'scale(0.9)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'scale(1)'
+						transform: 'translateY(-6px)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'sparkle': 'sparkle 3s ease-in-out infinite',
-				'float': 'float 4s ease-in-out infinite',
-				'gentle-bounce': 'gentle-bounce 2.5s ease-in-out infinite',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out'
-			},
-			boxShadow: {
-				'3xl': '0 35px 60px -12px rgba(0, 0, 0, 0.25)',
+				'sparkle': 'sparkle 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'gentle-bounce': 'gentle-bounce 2s ease-in-out infinite'
 			}
 		}
 	},

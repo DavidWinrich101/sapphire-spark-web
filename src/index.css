@@ -6,80 +6,80 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 15 23 42;
+    --foreground: 30 41 59;
 
     --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card-foreground: 30 41 59;
 
     --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover-foreground: 30 41 59;
 
-    --primary: 15 23 42;
+    --primary: 30 41 59;
     --primary-foreground: 248 250 252;
 
-    --secondary: 241 245 249;
-    --secondary-foreground: 15 23 42;
+    --secondary: 252 231 243;
+    --secondary-foreground: 30 41 59;
 
     --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
-    --accent: 241 245 249;
-    --accent-foreground: 15 23 42;
+    --accent: 252 231 243;
+    --accent-foreground: 30 41 59;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
     --border: 226 232 240;
     --input: 248 250 252;
-    --ring: 15 23 42;
+    --ring: 30 41 59;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 248 250 252;
     --sidebar-foreground: 71 85 105;
-    --sidebar-primary: 15 23 42;
+    --sidebar-primary: 30 41 59;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 241 245 249;
-    --sidebar-accent-foreground: 15 23 42;
+    --sidebar-accent: 252 231 243;
+    --sidebar-accent-foreground: 30 41 59;
     --sidebar-border: 226 232 240;
-    --sidebar-ring: 15 23 42;
+    --sidebar-ring: 30 41 59;
   }
 
   .dark {
-    --background: 15 23 42;
+    --background: 30 41 59;
     --foreground: 248 250 252;
 
-    --card: 15 23 42;
+    --card: 30 41 59;
     --card-foreground: 248 250 252;
 
-    --popover: 15 23 42;
-    --popover-foreground: 15 23 42;
+    --popover: 30 41 59;
+    --popover-foreground: 30 41 59;
 
     --primary: 248 250 252;
-    --primary-foreground: 15 23 42;
+    --primary-foreground: 30 41 59;
 
-    --secondary: 30 41 59;
+    --secondary: 51 65 85;
     --secondary-foreground: 248 250 252;
 
-    --muted: 30 41 59;
+    --muted: 51 65 85;
     --muted-foreground: 148 163 184;
 
-    --accent: 30 41 59;
+    --accent: 51 65 85;
     --accent-foreground: 248 250 252;
 
     --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
 
-    --border: 30 41 59;
-    --input: 30 41 59;
+    --border: 51 65 85;
+    --input: 51 65 85;
     --ring: 212 212 216;
-    --sidebar-background: 15 23 42;
+    --sidebar-background: 30 41 59;
     --sidebar-foreground: 203 213 225;
     --sidebar-primary: 59 130 246;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 30 41 59;
+    --sidebar-accent: 51 65 85;
     --sidebar-accent-foreground: 203 213 225;
-    --sidebar-border: 30 41 59;
+    --sidebar-border: 51 65 85;
     --sidebar-ring: 59 130 246;
   }
 }
@@ -91,97 +91,49 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   }
 }
 
 @layer utilities {
-  .glass-effect {
-    background: rgba(248, 250, 252, 0.95);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(226, 232, 240, 0.3);
-    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
+  .gradient-pink {
+    background: linear-gradient(135deg, #fce7f3 0%, #f9a8d4 50%, #ec4899 100%);
   }
-
-  .dark-glass-effect {
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(51, 65, 85, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  }
-
-  .premium-gradient {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
-  }
-
-  .light-premium-gradient {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  
+  .gradient-sparkle {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-
-  .floating-card {
-    @apply glass-effect rounded-3xl shadow-2xl border-2 border-slate-200/50 hover:border-slate-300/70 transition-all duration-500 hover:shadow-3xl hover:-translate-y-3;
-  }
-
-  .premium-button {
-    @apply bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-xl transition-all duration-300 hover:bg-slate-700 hover:shadow-2xl hover:-translate-y-1 border-2 border-slate-800 hover:border-slate-700;
-  }
-
-  .outline-premium-button {
-    @apply border-2 border-slate-600 text-slate-700 hover:bg-slate-800 hover:text-white hover:border-slate-800 font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
-  }
 }
 
-/* Enhanced animations */
-@keyframes float-gentle {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(2deg); }
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #ec4899;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 0 4px 20px rgba(30, 41, 59, 0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 2px solid #ec4899;
 }
 
-@keyframes sparkle-enhanced {
-  0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
-  25% { opacity: 0.7; transform: scale(1.1) rotate(90deg); }
-  50% { opacity: 0.4; transform: scale(1.2) rotate(180deg); }
-  75% { opacity: 0.7; transform: scale(1.1) rotate(270deg); }
-}
-
-@keyframes fade-in-up {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes scale-in-premium {
-  0% { opacity: 0; transform: scale(0.9) rotate(-5deg); }
-  100% { opacity: 1; transform: scale(1) rotate(0deg); }
-}
-
-.animate-float-gentle { animation: float-gentle 6s ease-in-out infinite; }
-.animate-sparkle-enhanced { animation: sparkle-enhanced 4s ease-in-out infinite; }
-.animate-fade-in-up { animation: fade-in-up 0.8s ease-out; }
-.animate-scale-in-premium { animation: scale-in-premium 0.6s ease-out; }
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #64748b, #475569);
-  border-radius: 10px;
-  border: 2px solid #f1f5f9;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #475569, #334155);
+.whatsapp-float:hover {
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(30, 41, 59, 0.4);
 }

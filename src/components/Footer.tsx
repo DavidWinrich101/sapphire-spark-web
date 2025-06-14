@@ -1,79 +1,60 @@
-
-import { Sparkles, Phone, Mail, MapPin, Instagram, Clock, ExternalLink } from "lucide-react";
+import { Sparkles, Phone, Mail, MapPin, Instagram, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Footer = () => {
-  return (
-    <footer className="bg-slate-900 text-white relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-800 to-slate-900"></div>
-        <div className="absolute top-10 right-10 w-64 h-64 bg-slate-700 rounded-full"></div>
-        <div className="absolute bottom-10 left-10 w-80 h-80 bg-slate-600 rounded-lg transform rotate-12"></div>
-      </div>
-
-      <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid md:grid-cols-4 gap-12">
+  return <footer className="bg-black text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mr-4">
-                <span className="text-xl font-bold font-playfair text-white">S</span>
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center mr-3">
+                <span className="text-lg font-bold font-playfair">S</span>
               </div>
               <div>
-                <h3 className="font-bold font-playfair text-xl text-white">Sapphire Spark</h3>
-                <p className="text-sm text-slate-400">Cleaning Services</p>
+                <h3 className="font-bold font-playfair">Sapphire Spark</h3>
+                <p className="text-xs text-gray-400">Cleaning Services</p>
               </div>
             </div>
-            <p className="text-slate-300 mb-6 leading-relaxed">
+            <p className="text-sm text-gray-400 mb-4">
               Flawless Spaces, Sapphire Shine.
             </p>
-            <div className="flex items-center text-slate-300">
-              <Sparkles className="h-5 w-5 mr-3" />
+            <div className="flex items-center text-pink-400">
+              <Sparkles className="h-4 w-4 mr-2" />
               <span className="text-sm">Premium Cleaning Excellence</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold mb-6 text-lg text-white">Our Services</h4>
-            <ul className="space-y-3 text-slate-300">
-              {[
-                "Home Cleaning",
-                "Office Cleaning", 
-                "Deep Cleaning",
-                "Post-Construction",
-                "Bags & Shoes",
-                "Carpet Cleaning"
-              ].map((service, index) => (
-                <li key={index}>
-                  <a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                    <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    {service}
-                  </a>
-                </li>
-              ))}
+            <h4 className="font-bold mb-4">Our Services</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li><a href="#" className="hover:text-white transition-colors">Home Cleaning</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Office Cleaning</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Deep Cleaning</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Post-Construction</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Bags & Shoes</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Carpet Cleaning</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-bold mb-6 text-lg text-white">Contact Us</h4>
-            <div className="space-y-4 text-slate-300">
-              <div className="flex items-center group hover:text-white transition-colors duration-300">
-                <Phone className="h-5 w-5 mr-3 text-slate-400 group-hover:text-white" />
+            <h4 className="font-bold mb-4">Contact Us</h4>
+            <div className="space-y-3 text-sm text-gray-400">
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2 text-pink-400" />
                 <span>+1 (555) 123-CLEAN</span>
               </div>
-              <div className="flex items-center group hover:text-white transition-colors duration-300">
-                <Mail className="h-5 w-5 mr-3 text-slate-400 group-hover:text-white" />
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2 text-pink-400" />
                 <span>hello@sapphirespark.com</span>
               </div>
-              <div className="flex items-center group hover:text-white transition-colors duration-300">
-                <MapPin className="h-5 w-5 mr-3 text-slate-400 group-hover:text-white" />
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-2 text-pink-400" />
                 <span>Greater Metro Area</span>
               </div>
-              <div className="flex items-center group hover:text-white transition-colors duration-300">
-                <Instagram className="h-5 w-5 mr-3 text-slate-400 group-hover:text-white" />
+              <div className="flex items-center">
+                <Instagram className="h-4 w-4 mr-2 text-pink-400" />
                 <span>@sapphiresparkclean</span>
               </div>
             </div>
@@ -81,57 +62,55 @@ const Footer = () => {
 
           {/* Working Hours */}
           <div>
-            <h4 className="font-bold mb-6 flex items-center text-lg text-white">
-              <Clock className="h-5 w-5 mr-3 text-slate-400" />
+            <h4 className="font-bold mb-4 flex items-center">
+              <Clock className="h-4 w-4 mr-2 text-pink-400" />
               Working Hours
             </h4>
-            <div className="space-y-3 text-slate-300 mb-6">
+            <div className="space-y-2 text-sm text-gray-400">
               <div className="flex justify-between">
                 <span>Mon - Fri</span>
-                <span className="font-semibold">8AM - 6PM</span>
+                <span>8AM - 6PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Saturday</span>
-                <span className="font-semibold">9AM - 4PM</span>
+                <span>9AM - 4PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Sunday</span>
-                <span className="font-semibold text-slate-400">Emergency</span>
+                <span>Emergency</span>
               </div>
             </div>
-            
-            <div className="p-4 bg-slate-800 rounded-xl border border-slate-700 mb-6">
-              <p className="text-sm text-slate-300 font-semibold">24/7 Emergency Services Available</p>
+            <div className="mt-4 p-3 bg-pink-900/30 rounded border border-pink-800">
+              <p className="text-xs text-pink-400 font-semibold">24/7 Emergency Services Available</p>
             </div>
             
-            <Button variant="outline" className="w-full border-2 border-slate-600 hover:bg-slate-700 hover:border-slate-500 transition-all duration-300 text-white rounded-xl py-3">
-              <Instagram className="h-5 w-5 mr-2" />
-              Follow on Instagram
-            </Button>
+            {/* Fixed Instagram Button */}
+            <div className="mt-4">
+              <Button variant="outline" className="w-full border-pink-500 hover:bg-pink-500 transition-colors text-slate-950">
+                <Instagram className="h-4 w-4 mr-2" />
+                Follow on Instagram
+              </Button>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-700 mt-16 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            <p className="text-slate-400">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-sm text-gray-400">
               © 2024 Sapphire Spark Cleaning Services. All rights reserved.
             </p>
-            <div className="flex space-x-8 text-slate-400">
-              {["Privacy Policy", "Terms of Service", "Satisfaction Guarantee"].map((link, index) => (
-                <a key={index} href="#" className="hover:text-white transition-colors duration-300">
-                  {link}
-                </a>
-              ))}
+            <div className="flex space-x-6 text-sm text-gray-400">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-white transition-colors">Satisfaction Guarantee</a>
             </div>
           </div>
-          <div className="mt-6 text-center text-slate-500 text-sm">
+          <div className="mt-4 text-xs text-gray-500">
             Professional • Reliable • Elegant • Licensed & Insured
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
