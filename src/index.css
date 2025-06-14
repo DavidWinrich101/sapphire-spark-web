@@ -6,80 +6,80 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 30 41 59;
+    --foreground: 15 23 42;
 
     --card: 255 255 255;
-    --card-foreground: 30 41 59;
+    --card-foreground: 15 23 42;
 
     --popover: 255 255 255;
-    --popover-foreground: 30 41 59;
+    --popover-foreground: 15 23 42;
 
-    --primary: 30 41 59;
+    --primary: 15 23 42;
     --primary-foreground: 248 250 252;
 
-    --secondary: 252 231 243;
-    --secondary-foreground: 30 41 59;
+    --secondary: 241 245 249;
+    --secondary-foreground: 15 23 42;
 
     --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
-    --accent: 252 231 243;
-    --accent-foreground: 30 41 59;
+    --accent: 241 245 249;
+    --accent-foreground: 15 23 42;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
     --border: 226 232 240;
     --input: 248 250 252;
-    --ring: 30 41 59;
+    --ring: 15 23 42;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 248 250 252;
     --sidebar-foreground: 71 85 105;
-    --sidebar-primary: 30 41 59;
+    --sidebar-primary: 15 23 42;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 252 231 243;
-    --sidebar-accent-foreground: 30 41 59;
+    --sidebar-accent: 241 245 249;
+    --sidebar-accent-foreground: 15 23 42;
     --sidebar-border: 226 232 240;
-    --sidebar-ring: 30 41 59;
+    --sidebar-ring: 15 23 42;
   }
 
   .dark {
-    --background: 30 41 59;
+    --background: 15 23 42;
     --foreground: 248 250 252;
 
-    --card: 30 41 59;
+    --card: 15 23 42;
     --card-foreground: 248 250 252;
 
-    --popover: 30 41 59;
-    --popover-foreground: 30 41 59;
+    --popover: 15 23 42;
+    --popover-foreground: 15 23 42;
 
     --primary: 248 250 252;
-    --primary-foreground: 30 41 59;
+    --primary-foreground: 15 23 42;
 
-    --secondary: 51 65 85;
+    --secondary: 30 41 59;
     --secondary-foreground: 248 250 252;
 
-    --muted: 51 65 85;
+    --muted: 30 41 59;
     --muted-foreground: 148 163 184;
 
-    --accent: 51 65 85;
+    --accent: 30 41 59;
     --accent-foreground: 248 250 252;
 
     --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
 
-    --border: 51 65 85;
-    --input: 51 65 85;
+    --border: 30 41 59;
+    --input: 30 41 59;
     --ring: 212 212 216;
-    --sidebar-background: 30 41 59;
+    --sidebar-background: 15 23 42;
     --sidebar-foreground: 203 213 225;
     --sidebar-primary: 59 130 246;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 51 65 85;
+    --sidebar-accent: 30 41 59;
     --sidebar-accent-foreground: 203 213 225;
-    --sidebar-border: 51 65 85;
+    --sidebar-border: 30 41 59;
     --sidebar-ring: 59 130 246;
   }
 }
@@ -95,45 +95,75 @@
 }
 
 @layer utilities {
-  .gradient-pink {
-    background: linear-gradient(135deg, #fce7f3 0%, #f9a8d4 50%, #ec4899 100%);
+  .gradient-slate {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
   }
   
-  .gradient-sparkle {
-    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%);
+  .gradient-dark {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   }
 
-  .text-gradient {
-    background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  .text-gradient-slate {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  .glass-effect {
+    background: rgba(248, 250, 252, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(226, 232, 240, 0.2);
+  }
+
+  .dark-glass-effect {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+  }
 }
 
-/* Floating WhatsApp Button */
-.whatsapp-float {
+/* Floating Elements */
+.float-element {
   position: fixed;
-  width: 56px;
-  height: 56px;
-  bottom: 24px;
-  right: 24px;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
   background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  color: #ec4899;
+  color: #f8fafc;
   border-radius: 50px;
   text-align: center;
   font-size: 24px;
-  box-shadow: 0 4px 20px rgba(30, 41, 59, 0.3);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.3);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  border: 2px solid #ec4899;
+  border: 2px solid rgba(51, 65, 85, 0.5);
 }
 
-.whatsapp-float:hover {
+.float-element:hover {
   background: linear-gradient(135deg, #334155 0%, #475569 100%);
-  transform: scale(1.05);
-  box-shadow: 0 6px 24px rgba(30, 41, 59, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
