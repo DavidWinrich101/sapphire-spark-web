@@ -1,85 +1,87 @@
 
-import { Sparkles, Award, Users, Heart, Shield, Clock, Zap } from "lucide-react";
+import { Sparkles, Award, Users, Heart, Shield, Clock, Zap, CheckCircle } from "lucide-react";
 
 const About = () => {
   return (
-    <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-800 to-slate-900"></div>
-        <div className="absolute top-20 right-20 w-64 h-64 bg-slate-700 rounded-full opacity-20"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-slate-600 rounded-lg transform rotate-45 opacity-15"></div>
+    <section className="py-32 premium-gradient text-white relative overflow-hidden">
+      {/* Enhanced background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-slate-300 rounded-2xl transform rotate-45 blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-white rounded-full blur-2xl opacity-30"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-700 rounded-full mb-6">
-            <Sparkles className="h-8 w-8 text-slate-300" />
+        <div className="text-center mb-24 animate-fade-in-up">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-3xl mb-8 border border-white/20">
+            <Sparkles className="h-10 w-10 text-white" />
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold font-playfair text-white mb-6">
-            About Us
+          <h2 className="text-6xl md:text-7xl font-bold font-playfair text-white mb-8">
+            About Our Excellence
           </h2>
-          <div className="w-24 h-1 bg-slate-400 mx-auto mb-8"></div>
-          <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            At Sapphire Spark Cleaning Services, we believe that cleanliness is not just about removing dirt—it's about creating spaces where life can flourish beautifully.
+          <div className="w-32 h-1 bg-white/50 mx-auto mb-10 rounded-full"></div>
+          <p className="text-2xl text-white/90 max-w-5xl mx-auto leading-relaxed font-light">
+            At Sapphire Spark Cleaning Services, we don't just clean—we create pristine environments where life and business flourish with unmatched elegance.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          <div className="space-y-8">
-            <h3 className="text-3xl font-semibold text-white font-playfair">
+        <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
+          <div className="space-y-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <h3 className="text-4xl font-semibold text-white font-playfair mb-6">
               Our Story & Vision
             </h3>
-            <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
-              <p>
-                Founded with a passion for perfection and an eye for detail, we've dedicated ourselves to transforming spaces into pristine environments that reflect the elegance and sophistication our clients deserve.
+            <div className="space-y-8 text-lg text-white/80 leading-relaxed">
+              <p className="text-xl">
+                Founded with an unwavering passion for perfection, we've dedicated ourselves to revolutionizing the cleaning industry through meticulous attention to detail and innovative techniques.
               </p>
               <p>
-                Every surface we touch, every corner we clean, and every service we provide is infused with our commitment to excellence. We understand that your space is more than just a place—it's your sanctuary, your workplace, your world.
+                Every surface we touch becomes a canvas for excellence. We understand that your space isn't just a location—it's your sanctuary, your productivity hub, your world that deserves nothing less than perfection.
+              </p>
+              <p>
+                Our commitment extends beyond cleaning; we create experiences that transform ordinary spaces into extraordinary environments that inspire and rejuvenate.
               </p>
             </div>
             
-            <div className="grid grid-cols-3 gap-6 pt-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="h-8 w-8 text-slate-300" />
+            <div className="grid grid-cols-3 gap-8 pt-10">
+              {[
+                { icon: Award, text: "Professional", subtitle: "Certified Excellence" },
+                { icon: Users, text: "Trusted", subtitle: "500+ Happy Clients" },
+                { icon: Heart, text: "Caring", subtitle: "Personal Touch" }
+              ].map((item, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-all duration-300 border border-white/20">
+                    <item.icon className="h-10 w-10 text-white" />
+                  </div>
+                  <p className="text-lg font-semibold text-white mb-1">{item.text}</p>
+                  <p className="text-sm text-white/70">{item.subtitle}</p>
                 </div>
-                <p className="text-sm font-semibold text-white">Professional</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-slate-300" />
-                </div>
-                <p className="text-sm font-semibold text-white">Trusted</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-8 w-8 text-slate-300" />
-                </div>
-                <p className="text-sm font-semibold text-white">Caring</p>
-              </div>
+              ))}
             </div>
           </div>
 
-          <div className="relative">
-            <div className="dark-glass-effect p-8 rounded-2xl shadow-2xl border border-slate-700">
-              <div className="flex items-center mb-8">
-                <Sparkles className="h-8 w-8 text-slate-400 mr-4" />
-                <h4 className="text-2xl font-semibold text-white">What Sets Us Apart</h4>
+          <div className="relative animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="dark-glass-effect p-10 rounded-3xl shadow-2xl border border-white/20 hover:border-white/30 transition-all duration-500">
+              <div className="flex items-center mb-10">
+                <Sparkles className="h-10 w-10 text-white mr-6" />
+                <h4 className="text-3xl font-semibold text-white">What Sets Us Apart</h4>
               </div>
-              <ul className="space-y-6">
+              <ul className="space-y-8">
                 {[
-                  { icon: Shield, text: "Meticulous attention to every detail" },
-                  { icon: Zap, text: "Premium, eco-friendly cleaning products" },
-                  { icon: Users, text: "Trained and background-checked staff" },
-                  { icon: Award, text: "100% satisfaction guarantee" },
-                  { icon: Clock, text: "Flexible scheduling to fit your lifestyle" }
+                  { icon: Shield, text: "Comprehensive insurance coverage and bonding", highlight: "100% Protected" },
+                  { icon: Zap, text: "Premium eco-friendly products that protect your family", highlight: "Safe & Green" },
+                  { icon: Users, text: "Thoroughly vetted and professionally trained staff", highlight: "Elite Team" },
+                  { icon: Award, text: "Unconditional satisfaction guarantee", highlight: "Risk-Free" },
+                  { icon: Clock, text: "Flexible scheduling that adapts to your lifestyle", highlight: "Your Schedule" }
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="flex-shrink-0 w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center mr-4">
-                      <item.icon className="h-5 w-5 text-slate-300" />
+                  <li key={index} className="flex items-center group">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mr-6 group-hover:bg-white/20 transition-all duration-300">
+                      <item.icon className="h-6 w-6 text-white" />
                     </div>
-                    <span className="text-slate-300 text-lg">{item.text}</span>
+                    <div className="flex-grow">
+                      <span className="text-white text-lg leading-relaxed">{item.text}</span>
+                      <div className="text-white/60 text-sm font-medium">{item.highlight}</div>
+                    </div>
+                    <CheckCircle className="h-5 w-5 text-green-400 ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </li>
                 ))}
               </ul>
@@ -87,17 +89,20 @@ const About = () => {
           </div>
         </div>
 
-        {/* Stats section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {/* Enhanced stats section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           {[
-            { number: "500+", label: "Satisfied Clients" },
-            { number: "2000+", label: "Spaces Cleaned" },
-            { number: "5", label: "Years Experience" },
-            { number: "24/7", label: "Support Available" }
+            { number: "500+", label: "Satisfied Clients", icon: Users },
+            { number: "2000+", label: "Spaces Cleaned", icon: Sparkles },
+            { number: "5", label: "Years Experience", icon: Award },
+            { number: "24/7", label: "Support Available", icon: Clock }
           ].map((stat, index) => (
-            <div key={index} className="text-center dark-glass-effect p-6 rounded-xl">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-slate-400">{stat.label}</div>
+            <div key={index} className="text-center dark-glass-effect p-8 rounded-3xl hover:scale-105 transition-all duration-500 border border-white/10 hover:border-white/20 group">
+              <div className="flex justify-center mb-4">
+                <stat.icon className="h-8 w-8 text-white/70 group-hover:text-white transition-colors duration-300" />
+              </div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-3">{stat.number}</div>
+              <div className="text-white/70 font-medium">{stat.label}</div>
             </div>
           ))}
         </div>

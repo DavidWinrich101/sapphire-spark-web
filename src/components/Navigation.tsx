@@ -3,12 +3,14 @@ import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 import { useToast } from '@/hooks/use-toast';
-import { User, LogOut, Sparkles } from 'lucide-react';
+import { User, LogOut, Sparkles, Menu } from 'lucide-react';
+import { useState } from 'react';
 
 const Navigation = () => {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleSignOut = async () => {
     const { error } = await signOut();
@@ -28,49 +30,91 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-slate-200/20">
-      <div className="container mx-auto px-4 flex justify-between items-center py-6">
-        <Link to="/" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <Sparkles className="h-6 w-6 text-white" />
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-slate-200/30">
+      <div className="container mx-auto px-6 flex justify-between items-center py-8">
+        <Link to="/" className="flex items-center space-x-4 group">
+          <div className="relative w-12 h-12 premium-gradient rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg">
+            <Sparkles className="h-7 w-7 text-white group-hover:rotate-12 transition-transform duration-300" />
+            <div className="absolute -top-1 -right-1 w-4 h-4 bg-slate-300 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div>
-            <span className="text-2xl font-bold font-playfair text-slate-800 group-hover:text-slate-700 transition-colors duration-300">
+            <span className="text-3xl font-bold font-playfair text-slate-800 group-hover:text-slate-700 transition-colors duration-300">
               Sapphire Spark
             </span>
+            <div className="text-sm text-slate-500 font-medium tracking-wide">Cleaning Services</div>
           </div>
         </Link>
         
-        <div className="flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-8">
           {user ? (
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-3 text-slate-700 dark-glass-effect px-4 py-2 rounded-xl">
-                <User className="h-5 w-5" />
-                <span className="text-sm font-medium">{user.email}</span>
+            <div className="flex items-center gap-8">
+              <div className="flex items-center gap-4 glass-effect px-6 py-3 rounded-2xl border border-slate-200/50">
+                <div className="w-8 h-8 premium-gradient rounded-full flex items-center justify-center">
+                  <User className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <span className="text-sm font-semibold text-slate-800">{user.email}</span>
+                  <div className="text-xs text-slate-500">Premium Member</div>
+                </div>
               </div>
               <Button 
-                variant="outline" 
-                size="sm" 
                 onClick={handleSignOut} 
-                className="flex items-center gap-2 border-2 border-slate-600 text-slate-700 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all duration-300 rounded-xl px-6 py-2"
+                className="outline-premium-button flex items-center gap-3"
               >
-                <LogOut className="h-4 w-4" />
+                <LogOut className="h-5 w-5" />
                 Sign Out
               </Button>
             </div>
           ) : (
             <Link to="/auth">
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="bg-slate-800 text-white border-2 border-slate-800 hover:bg-slate-700 hover:border-slate-700 transition-all duration-300 rounded-xl px-6 py-2 font-semibold"
-              >
+              <Button className="premium-button flex items-center gap-3">
+                <User className="h-5 w-5" />
                 Sign In
               </Button>
             </Link>
           )}
         </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-slate-700 hover:text-slate-800"
+          >
+            <Menu className="h-6 w-6" />
+          </Button>
+        </div>
       </div>
+
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <div className="md:hidden glass-effect border-t border-slate-200/30 p-6">
+          {user ? (
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 p-3 glass-effect rounded-xl">
+                <User className="h-5 w-5 text-slate-600" />
+                <span className="text-sm font-medium text-slate-800">{user.email}</span>
+              </div>
+              <Button 
+                onClick={handleSignOut} 
+                className="w-full outline-premium-button"
+              >
+                <LogOut className="h-4 w-4 mr-2" />
+                Sign Out
+              </Button>
+            </div>
+          ) : (
+            <Link to="/auth" onClick={() => setIsMenuOpen(false)}>
+              <Button className="w-full premium-button">
+                <User className="h-4 w-4 mr-2" />
+                Sign In
+              </Button>
+            </Link>
+          )}
+        </div>
+      )}
     </nav>
   );
 };

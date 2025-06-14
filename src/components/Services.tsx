@@ -2,14 +2,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Home, Brush, Package, Check, Clock, Star } from "lucide-react";
+import { Home, Brush, Package, Check, Clock, Star, Sparkles, ArrowRight } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       title: "Home & Office Cleaning",
       icon: Home,
-      description: "Comprehensive cleaning solutions for residential and commercial spaces",
+      description: "Comprehensive cleaning solutions for residential and commercial spaces that exceed expectations",
       features: [
         "Deep cleaning services",
         "Regular maintenance cleaning", 
@@ -19,12 +19,13 @@ const Services = () => {
         "Sanitization services"
       ],
       price: "Starting at $89",
-      available: true
+      available: true,
+      popular: true
     },
     {
       title: "Bags & Shoes Cleaning",
       icon: Brush,
-      description: "Specialized care for your luxury bags, shoes, and leather goods",
+      description: "Specialized luxury care for your precious bags, shoes, and leather goods with expert restoration",
       features: [
         "Leather bag restoration",
         "Designer shoe cleaning",
@@ -34,12 +35,13 @@ const Services = () => {
         "Professional care"
       ],
       price: "Starting at $45",
-      available: true
+      available: true,
+      popular: false
     },
     {
       title: "Laundry Services",
       icon: Package,
-      description: "Premium laundry care for beddings, rugs, and specialty items",
+      description: "Premium laundry care for beddings, rugs, and specialty items with delicate attention",
       features: [
         "Bedding cleaning",
         "Rug cleaning & restoration",
@@ -50,80 +52,90 @@ const Services = () => {
       ],
       price: "Starting at $35",
       available: false,
-      comingSoon: true
+      comingSoon: true,
+      popular: false
     }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
-      {/* Background elements */}
+    <section className="py-32 light-premium-gradient relative overflow-hidden">
+      {/* Enhanced background elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 right-10 w-72 h-72 bg-slate-400 rounded-full"></div>
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-slate-300 rounded-lg transform rotate-12"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 premium-gradient rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-slate-600 rounded-3xl transform rotate-12 blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-slate-400 rounded-full blur-xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
-            <Star className="h-8 w-8 text-slate-700" />
+        <div className="text-center mb-24 animate-fade-in-up">
+          <div className="inline-flex items-center justify-center w-20 h-20 floating-card mb-8">
+            <Star className="h-10 w-10 text-slate-700" />
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold font-playfair text-slate-800 mb-6">
-            Our Services
+          <h2 className="text-6xl md:text-7xl font-bold font-playfair text-slate-800 mb-8">
+            Premium Services
           </h2>
-          <div className="w-24 h-1 bg-slate-400 mx-auto mb-8"></div>
-          <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
-            From everyday cleaning to specialized care, we offer comprehensive solutions tailored to your unique needs
+          <div className="w-32 h-1 premium-gradient mx-auto mb-10 rounded-full"></div>
+          <p className="text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed font-light">
+            From everyday excellence to specialized luxury care, we offer comprehensive solutions crafted for perfection
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-10 mb-20">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             
             return (
-              <Card key={index} className={`relative h-full transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-white border-2 ${
+              <Card key={index} className={`relative h-full transition-all duration-700 hover:shadow-3xl hover:-translate-y-4 bg-white/95 backdrop-blur-sm border-2 ${
                 service.available 
-                  ? 'border-slate-200 hover:border-slate-400 hover:shadow-slate-200/25' 
-                  : 'border-slate-100 opacity-75'
-              } rounded-2xl overflow-hidden group`}>
+                  ? 'border-slate-200/50 hover:border-slate-400/70 shadow-2xl' 
+                  : 'border-slate-100/50 opacity-80'
+              } rounded-3xl overflow-hidden group animate-fade-in-up`} style={{ animationDelay: `${index * 0.2}s` }}>
+                
+                {service.popular && (
+                  <Badge className="absolute -top-3 left-8 bg-slate-800 text-white border-2 border-slate-700 z-10 px-4 py-1 text-sm font-semibold">
+                    <Sparkles className="h-4 w-4 mr-1" />
+                    Most Popular
+                  </Badge>
+                )}
+                
                 {service.comingSoon && (
-                  <Badge className="absolute -top-3 left-6 bg-slate-700 text-white border border-slate-600 z-10">
+                  <Badge className="absolute -top-3 right-8 bg-slate-600 text-white border-2 border-slate-500 z-10 px-4 py-1 text-sm">
                     Coming Soon
                   </Badge>
                 )}
                 
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 premium-gradient opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl"></div>
                 
-                <CardHeader className="text-center pb-4 relative z-10">
-                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl mx-auto mb-6 transition-all duration-300 ${
+                <CardHeader className="text-center pb-6 relative z-10 p-8">
+                  <div className={`inline-flex items-center justify-center w-24 h-24 rounded-3xl mx-auto mb-8 transition-all duration-500 ${
                     service.available 
-                      ? 'bg-slate-100 group-hover:bg-slate-200 group-hover:scale-110' 
-                      : 'bg-slate-50'
+                      ? 'floating-card group-hover:scale-110 group-hover:rotate-6' 
+                      : 'bg-slate-100 border border-slate-200'
                   }`}>
-                    <IconComponent className={`h-10 w-10 ${
-                      service.available ? 'text-slate-700' : 'text-slate-400'
+                    <IconComponent className={`h-12 w-12 ${
+                      service.available ? 'text-slate-700 group-hover:text-slate-800' : 'text-slate-400'
                     }`} />
                   </div>
-                  <CardTitle className={`text-2xl font-playfair mb-3 ${
+                  <CardTitle className={`text-3xl font-playfair mb-4 ${
                     service.available ? 'text-slate-800' : 'text-slate-500'
                   }`}>
                     {service.title}
                   </CardTitle>
-                  <CardDescription className="text-slate-600 text-base leading-relaxed">
+                  <CardDescription className="text-slate-600 text-lg leading-relaxed mb-6">
                     {service.description}
                   </CardDescription>
                   {service.available && (
-                    <div className="text-2xl font-bold text-slate-800 mt-3">
+                    <div className="text-3xl font-bold text-gradient mb-2">
                       {service.price}
                     </div>
                   )}
                 </CardHeader>
 
-                <CardContent className="relative z-10">
-                  <ul className="space-y-3">
+                <CardContent className="relative z-10 px-8">
+                  <ul className="space-y-4">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-base">
-                        <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${
+                      <li key={featureIndex} className="flex items-center text-lg group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${featureIndex * 50}ms` }}>
+                        <Check className={`h-6 w-6 mr-4 flex-shrink-0 ${
                           service.available ? 'text-slate-600' : 'text-slate-400'
                         }`} />
                         <span className={service.available ? 'text-slate-700' : 'text-slate-500'}>
@@ -134,19 +146,20 @@ const Services = () => {
                   </ul>
                 </CardContent>
 
-                <CardFooter className="relative z-10">
+                <CardFooter className="relative z-10 p-8">
                   <Button 
-                    className={`w-full text-lg py-6 rounded-xl transition-all duration-300 ${
+                    className={`w-full text-lg py-6 rounded-2xl transition-all duration-500 group/button ${
                       service.available 
-                        ? 'bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-xl' 
+                        ? 'premium-button group-hover:bg-slate-700' 
                         : 'bg-slate-300 text-slate-500 cursor-not-allowed hover:bg-slate-300'
                     }`}
                     disabled={!service.available}
                   >
                     {service.available ? (
                       <>
-                        <Clock className="mr-2 h-5 w-5" />
+                        <Clock className="mr-3 h-6 w-6 group-hover/button:rotate-12 transition-transform duration-300" />
                         Book Now
+                        <ArrowRight className="ml-3 h-6 w-6 group-hover/button:translate-x-1 transition-transform duration-300" />
                       </>
                     ) : (
                       'Notify When Available'
@@ -158,21 +171,24 @@ const Services = () => {
           })}
         </div>
 
-        {/* Process section */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold font-playfair text-slate-800 mb-12">
+        {/* Enhanced process section */}
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <h3 className="text-4xl font-bold font-playfair text-slate-800 mb-16">
             Our Simple Process
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {[
-              { step: "01", title: "Book Online", description: "Schedule your service in just a few clicks" },
-              { step: "02", title: "We Clean", description: "Our professional team handles everything" },
-              { step: "03", title: "Enjoy Results", description: "Relax in your pristine, sparkling space" }
+              { step: "01", title: "Book Online", description: "Schedule your service in just a few clicks with our seamless booking system", icon: Clock },
+              { step: "02", title: "We Clean", description: "Our elite professional team handles everything with precision and care", icon: Sparkles },
+              { step: "03", title: "Enjoy Results", description: "Relax and enjoy your pristine, sparkling space that exceeds expectations", icon: Star }
             ].map((process, index) => (
-              <div key={index} className="glass-effect p-8 rounded-2xl">
-                <div className="text-4xl font-bold text-slate-700 mb-4">{process.step}</div>
-                <h4 className="text-xl font-semibold text-slate-800 mb-3">{process.title}</h4>
-                <p className="text-slate-600">{process.description}</p>
+              <div key={index} className="floating-card p-10 group hover:scale-105 transition-all duration-500" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="flex justify-center mb-6">
+                  <process.icon className="h-12 w-12 text-slate-600 group-hover:text-slate-800 transition-colors duration-300" />
+                </div>
+                <div className="text-5xl font-bold text-gradient mb-6">{process.step}</div>
+                <h4 className="text-2xl font-semibold text-slate-800 mb-4 font-playfair">{process.title}</h4>
+                <p className="text-slate-600 leading-relaxed text-lg">{process.description}</p>
               </div>
             ))}
           </div>
